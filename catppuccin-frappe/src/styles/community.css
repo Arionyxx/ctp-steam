@@ -1,0 +1,334 @@
+/*
+ * Community Page Styles - Catppuccin Frappé
+ */
+
+/* ================================================
+   PROFILE PAGES
+   ================================================ */
+
+div[class*="profile_ProfilePage"] {
+  background: var(--ctp-base);
+  color: var(--ctp-text);
+}
+
+div[class*="profile_ProfileHeader"] {
+  background: linear-gradient(to bottom, var(--ctp-mantle), transparent);
+}
+
+div[class*="profile_ProfileAvatar"] {
+  border: 3px solid var(--ctp-accent-primary);
+}
+
+div[class*="profile_ProfileName"] {
+  color: var(--ctp-text);
+}
+
+div[class*="profile_ProfileStatus"] {
+  color: var(--ctp-subtext1);
+}
+
+div[class*="profile_ProfileStats"] {
+  background: var(--ctp-surface0);
+}
+
+div[class*="profile_StatItem"] {
+  color: var(--ctp-text);
+}
+
+div[class*="profile_StatItem"]:hover {
+  background: var(--ctp-surface1);
+}
+
+div[class*="profile_LevelBadge"] {
+  background: var(--ctp-accent-primary);
+  color: var(--ctp-base);
+}
+
+/* ================================================
+   COMMUNITY HUB
+   ================================================ */
+
+div[class*="communityhub_Page"] {
+  background: var(--ctp-base);
+}
+
+div[class*="communityhub_Navigation"] {
+  background: var(--ctp-mantle);
+}
+
+div[class*="communityhub_NavItem"] {
+  color: var(--ctp-subtext0);
+}
+
+div[class*="communityhub_NavItem"]:hover {
+  color: var(--ctp-text);
+  background: var(--ctp-surface0);
+}
+
+div[class*="communityhub_NavItem"][class*="communityhub_Active"] {
+  color: var(--ctp-accent-primary);
+  border-bottom: 2px solid var(--ctp-accent-primary);
+}
+
+div[class*="communityhub_FeedItem"] {
+  background: var(--ctp-surface0);
+  border: 1px solid var(--ctp-border);
+}
+
+div[class*="communityhub_FeedItem"]:hover {
+  background: var(--ctp-surface1);
+}
+
+/* ================================================
+   WORKSHOP PAGES
+   ================================================ */
+
+div[class*="workshop_WorkshopPage"] {
+  background: var(--ctp-base);
+}
+
+div[class*="workshop_WorkshopHeader"] {
+  background: var(--ctp-mantle);
+  color: var(--ctp-text);
+}
+
+div[class*="workshop_ItemCard"] {
+  background: var(--ctp-surface0);
+  border: 1px solid var(--ctp-border);
+}
+
+div[class*="workshop_ItemCard"]:hover {
+  background: var(--ctp-surface1);
+  border-color: var(--ctp-accent-primary);
+}
+
+div[class*="workshop_SubscribeButton"] {
+  background: var(--ctp-green);
+  color: var(--ctp-base);
+}
+
+div[class*="workshop_SubscribeButton"]:hover {
+  background: rgba(166, 209, 137, 0.85);
+}
+
+div[class*="workshop_SubscribeButton"][class*="workshop_Subscribed"] {
+  background: var(--ctp-accent-primary);
+}
+
+div[class*="workshop_RatingStars"] {
+  color: var(--ctp-yellow);
+}
+
+div[class*="workshop_Tags"] {
+  background: var(--ctp-surface1);
+  color: var(--ctp-subtext1);
+}
+
+/* ================================================
+   DISCUSSIONS AND FORUMS
+   ================================================ */
+
+div[class*="discussions_ForumPage"] {
+  background: var(--ctp-base);
+}
+
+div[class*="discussions_ThreadList"] {
+  background: var(--ctp-surface0);
+}
+
+div[class*="discussions_ThreadItem"] {
+  border-bottom: 1px solid var(--ctp-border);
+  color: var(--ctp-text);
+}
+
+div[class*="discussions_ThreadItem"]:hover {
+  background: var(--ctp-surface1);
+}
+
+div[class*="discussions_ThreadTitle"] {
+  color: var(--ctp-text);
+}
+
+div[class*="discussions_ThreadTitle"]:hover {
+  color: var(--ctp-accent-primary);
+}
+
+div[class*="discussions_PostContent"] {
+  background: var(--ctp-surface0);
+  color: var(--ctp-text);
+  border: 1px solid var(--ctp-border);
+}
+
+div[class*="discussions_PostAuthor"] {
+  background: var(--ctp-mantle);
+  color: var(--ctp-subtext1);
+}
+
+div[class*="discussions_PostActions"] {
+  color: var(--ctp-subtext0);
+}
+
+div[class*="discussions_PostActions"] button:hover {
+  color: var(--ctp-accent-primary);
+}
+
+div[class*="discussions_PinnedThread"] {
+  background: var(--ctp-surface1);
+  border-left: 3px solid var(--ctp-accent-primary);
+}
+
+div[class*="discussions_LockedThread"] {
+  opacity: 0.6;
+  color: var(--ctp-subtext0);
+}
+
+/* ================================================
+   FRIENDS AND GROUPS
+   ================================================ */
+
+div[class*="friends_FriendsPage"] {
+  background: var(--ctp-base);
+}
+
+div[class*="friends_FriendCard"] {
+  background: var(--ctp-surface0);
+  border: 1px solid var(--ctp-border);
+}
+
+div[class*="friends_FriendCard"]:hover {
+  background: var(--ctp-surface1);
+}
+
+div[class*="friends_OnlineStatus"][class*="friends_Online"] {
+  color: var(--ctp-green);
+}
+
+div[class*="friends_OnlineStatus"][class*="friends_Away"] {
+  color: var(--ctp-yellow);
+}
+
+div[class*="friends_OnlineStatus"][class*="friends_Offline"] {
+  color: var(--ctp-subtext0);
+}
+
+div[class*="friends_OnlineStatus"][class*="friends_InGame"] {
+  color: var(--ctp-blue);
+}
+
+div[class*="groups_GroupCard"] {
+  background: var(--ctp-surface0);
+  border: 1px solid var(--ctp-border);
+}
+
+div[class*="groups_GroupCard"]:hover {
+  background: var(--ctp-surface1);
+}
+
+div[class*="groups_GroupAvatar"] {
+  border: 2px solid var(--ctp-accent-primary);
+}
+
+/* ================================================
+   SCREENSHOTS AND ARTWORK
+   ================================================ */
+
+div[class*="screenshots_Gallery"] {
+  background: var(--ctp-base);
+}
+
+div[class*="screenshots_Thumbnail"] {
+  border: 2px solid var(--ctp-border);
+}
+
+div[class*="screenshots_Thumbnail"]:hover {
+  border-color: var(--ctp-accent-primary);
+  transform: scale(1.05);
+}
+
+div[class*="screenshots_LikeButton"] {
+  color: var(--ctp-red);
+}
+
+div[class*="screenshots_LikeButton"][class*="screenshots_Liked"] {
+  color: var(--ctp-red);
+  background: rgba(231, 130, 132, 0.2);
+}
+
+div[class*="screenshots_CommentSection"] {
+  background: var(--ctp-surface0);
+}
+
+div[class*="screenshots_Comment"] {
+  border-bottom: 1px solid var(--ctp-border);
+  color: var(--ctp-text);
+}
+
+/* ================================================
+   REVIEWS AND RATINGS
+   ================================================ */
+
+div[class*="reviews_ReviewSection"] {
+  background: var(--ctp-surface0);
+}
+
+div[class*="reviews_ReviewCard"] {
+  background: var(--ctp-base);
+  border: 1px solid var(--ctp-border);
+}
+
+div[class*="reviews_ReviewCard"]:hover {
+  background: var(--ctp-surface1);
+}
+
+div[class*="reviews_Positive"] {
+  color: var(--ctp-green);
+}
+
+div[class*="reviews_Negative"] {
+  color: var(--ctp-red);
+}
+
+div[class*="reviews_HelpfulButton"] {
+  background: var(--ctp-surface0);
+  color: var(--ctp-subtext1);
+}
+
+div[class*="reviews_HelpfulButton"]:hover {
+  background: var(--ctp-surface1);
+  color: var(--ctp-text);
+}
+
+div[class*="reviews_HelpfulButton"][class*="reviews_Voted"] {
+  background: var(--ctp-accent-primary);
+  color: var(--ctp-base);
+}
+
+/* ================================================
+   BROADCASTS AND VIDEOS
+   ================================================ */
+
+div[class*="broadcast_VideoPlayer"] {
+  background: var(--ctp-crust);
+}
+
+div[class*="broadcast_Controls"] {
+  background: linear-gradient(to top, var(--ctp-mantle), transparent);
+}
+
+div[class*="broadcast_PlayButton"] {
+  background: var(--ctp-green);
+  color: var(--ctp-base);
+}
+
+div[class*="broadcast_PlayButton"]:hover {
+  background: rgba(166, 209, 137, 0.85);
+}
+
+div[class*="broadcast_Chat"] {
+  background: var(--ctp-surface0);
+}
+
+div[class*="broadcast_ChatMessage"] {
+  color: var(--ctp-text);
+  border-bottom: 1px solid var(--ctp-border);
+}

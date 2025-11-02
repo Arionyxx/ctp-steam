@@ -1,0 +1,329 @@
+/*
+ * Frame and Navigation Styles - Catppuccin Mocha
+ * Top bar, super navigation, window controls
+ */
+
+/* ================================================
+   TOP NAVIGATION BAR
+   ================================================ */
+
+/* Main top bar background */
+div[class*="steamdesktop_TopBar"] {
+  background: var(--ctp-mantle);
+}
+
+/* Focus bar highlight */
+div[class*="steamdesktop_FocusBar"][class*="steamdesktop_Focused"] {
+  display: block;
+  background: linear-gradient(to right, transparent 10%, rgba(30, 102, 245, 0.3) 50%, transparent 90%);
+}
+
+/* Root menu buttons (Steam, View, etc.) */
+div[class*="rootmenu_RootMenuButton"] {
+  color: var(--ctp-subtext0);
+}
+
+div[class*="rootmenu_RootMenuButton"]:hover:not([class*="rootmenu_Disabled"]) {
+  color: var(--ctp-subtext1);
+}
+
+/* News/Announcements button */
+div[class*="titlebarcontrols_AnnouncementsButton"] {
+  background-color: var(--ctp-surface1);
+  color: var(--ctp-overlay0);
+}
+
+div[class*="titlebarcontrols_AnnouncementsButton"]:hover {
+  background-color: var(--ctp-overlay0);
+}
+
+div[class*="titlebarcontrols_AnnouncementsButton"]:hover [class*="titlebarcontrols_Icon"] {
+  color: var(--ctp-overlay2);
+}
+
+div[class*="titlebarcontrols_AnnouncementsButton"][class*="titlebarcontrols_Active"] {
+  background-color: var(--ctp-accent-primary);
+  color: var(--ctp-crust);
+}
+
+div[class*="titlebarcontrols_AnnouncementsButton"][class*="titlebarcontrols_Active"]:hover {
+  background-color: rgba(30, 102, 245, 0.8);
+  color: var(--ctp-crust);
+}
+
+/* Notifications button */
+div[class*="titlebarcontrols_NotificationsButton"] {
+  color: var(--ctp-surface0);
+}
+
+div[class*="titlebarcontrols_NotificationsButton"][class*="titlebarcontrols_WasNew"],
+div[class*="titlebarcontrols_NotificationsButton"][class*="titlebarcontrols_NoNew"] {
+  background-color: var(--ctp-surface1);
+}
+
+div[class*="titlebarcontrols_NotificationsButton"][class*="titlebarcontrols_WasNew"]:not([class*="titlebarcontrols_Disabled"]):hover,
+div[class*="titlebarcontrols_NotificationsButton"][class*="titlebarcontrols_NoNew"]:not([class*="titlebarcontrols_Disabled"]):hover {
+  background: var(--ctp-overlay0);
+}
+
+div[class*="titlebarcontrols_NotificationsButton"][class*="titlebarcontrols_NoNew"] [class*="titlebarcontrols_Icon"] {
+  color: var(--ctp-overlay0);
+}
+
+div[class*="titlebarcontrols_NotificationsButton"][class*="titlebarcontrols_NoNew"]:not([class*="titlebarcontrols_Disabled"]):hover [class*="titlebarcontrols_Icon"] {
+  color: var(--ctp-overlay2);
+}
+
+div[class*="titlebarcontrols_NotificationsButton"][class*="titlebarcontrols_HasNew"] {
+  background-color: var(--ctp-green);
+}
+
+div[class*="titlebarcontrols_NotificationsButton"][class*="titlebarcontrols_HasNew"]:not([class*="titlebarcontrols_Disabled"]):hover {
+  background-color: rgba(64, 160, 43, 0.8);
+}
+
+/* Account menu */
+div[class*="titlebarcontrols_AccountMenu_"] {
+  background-color: var(--ctp-surface1);
+}
+
+div[class*="titlebarcontrols_AccountMenu_"].online {
+  color: var(--ctp-blue);
+}
+
+div[class*="titlebarcontrols_AccountMenu_"].online div[class*="steamavatar_avatarStatus"] {
+  background: linear-gradient(to bottom, var(--ctp-blue) 0%, var(--ctp-blue) 30%, var(--ctp-blue) 70%, var(--ctp-blue) 100%);
+}
+
+div[class*="titlebarcontrols_AccountMenu_"]:hover {
+  background-color: var(--ctp-overlay0);
+}
+
+/* Big Picture mode button */
+div[class*="titlebarcontrols_GamepadUIToggle"] {
+  color: var(--ctp-overlay0);
+}
+
+div[class*="titlebarcontrols_GamepadUIToggle"]:hover {
+  background: var(--ctp-surface0);
+}
+
+div[class*="titlebarcontrols_Button"]:hover {
+  color: var(--ctp-text);
+}
+
+/* Window controls (minimize, maximize, close) */
+.title-area-icon-inner rect,
+.title-area-icon-inner line,
+.title-area-icon .SVGIcon_X_Line line {
+  stroke: var(--ctp-overlay0);
+}
+
+.title-area-icon:hover .SVGIcon_Button rect,
+.title-area-icon:hover .SVGIcon_Button line,
+.title-area-icon:hover .SVGIcon_Button polyline {
+  stroke: var(--ctp-text);
+}
+
+.DesktopUI .title-area-icon:hover {
+  background: var(--ctp-surface0);
+}
+
+.DesktopUI .title-area-icon.closeButton:hover {
+  background: var(--ctp-red);
+}
+
+.title-area-icon.closeButton:hover .title-area-icon-inner line {
+  stroke: var(--ctp-crust);
+}
+
+/* ================================================
+   SUPER NAVIGATION (Library, Store, etc.)
+   ================================================ */
+
+div[class*="SuperNavMenu"] div[class*="supernav_MenuButton"] {
+  color: var(--ctp-text);
+}
+
+div[class*="SuperNavMenu"]:hover:not([class*="supernav_Disabled"]) div[class*="supernav_MenuButton"] {
+  color: var(--ctp-subtext0);
+}
+
+div[class*="SuperNavMenu"][class*="supernav_Selected"]:not([class*="supernav_Disabled"]) div[class*="supernav_MenuButton"] {
+  color: var(--ctp-accent-primary);
+  text-shadow: 0px 0px 1px var(--ctp-accent-primary);
+}
+
+div[class*="SuperNavMenu"][class*="supernav_Selected"]:not([class*="supernav_Disabled"]) div[class*="supernav_MenuButton"]::after {
+  background: var(--ctp-accent-primary);
+}
+
+[class*="supernav_Arrow"] {
+  color: var(--ctp-overlay2);
+}
+
+[class*="supernav_Arrow"][class*="supernav_Disabled"] {
+  color: var(--ctp-surface1);
+}
+
+[class*="supernav_Arrow"][class*="supernav_Enabled"]:hover {
+  color: var(--ctp-accent-primary);
+}
+
+/* Browser bar */
+div[class*="steamdesktop_BrowserWrapper"] div[class*="steamdesktop_URLBar"] {
+  background: var(--ctp-mantle);
+}
+
+div[class*="steamdesktop_LocalContentContainer"] div[class*="steamdesktop_URLBarReplacement"] {
+  background: var(--ctp-crust);
+}
+
+/* ================================================
+   TOOLTIPS
+   ================================================ */
+
+div[class*="tooltip_TextToolTip"] {
+  background-color: var(--ctp-surface0);
+  color: var(--ctp-text);
+}
+
+/* ================================================
+   NOTIFICATIONS
+   ================================================ */
+
+div[class*="standardtemplates_StandardTemplateDesktop"][class*="standardtemplates_Unread"] {
+  background: var(--ctp-surface0);
+}
+
+div[class*="standardtemplates_StandardTemplateDesktop"][class*="standardtemplates_Unread"]:hover {
+  background: var(--ctp-surface1);
+}
+
+div[class^="titlebarcontrols_NotificationHeader"] [class*="titlebarcontrols_AllNotificationsButton"] {
+  background: var(--ctp-surface1);
+  color: var(--ctp-subtext1);
+}
+
+div[class^="titlebarcontrols_NotificationHeader"] [class*="titlebarcontrols_AllNotificationsButton"]:hover {
+  background-color: var(--ctp-surface0);
+}
+
+div[class*="titlebarcontrols_NotificationsMenu"] {
+  color: var(--ctp-text);
+}
+
+div[class*="titlebarcontrols_EmptyNotificationsBody"] {
+  color: var(--ctp-subtext0) !important;
+}
+
+div[class*="standardtemplates_NewIndicator"] svg {
+  color: var(--ctp-green);
+}
+
+/* ================================================
+   BOTTOM BAR
+   ================================================ */
+
+div[class*="bottombar_BottomBar"] {
+  background: var(--ctp-mantle);
+}
+
+div[class*="bottombar_ProgressBarWrapper"] div[class*="bottombar_ProgressBar"] {
+  --color-progress-bar-foreground: var(--ctp-accent-primary);
+  --color-progress-bar-background: var(--ctp-crust);
+}
+
+div[class*="bottombar_AddGameButton"] div[class*="bottombar_Icon"],
+div[class*="bottombar_FriendsButton"] div[class*="bottombar_Icon"] {
+  color: var(--ctp-surface2);
+}
+
+div[class*="bottombar_AddGameButton"] div[class*="bottombar_Text"],
+div[class*="bottombar_FriendsButton"] div[class*="bottombar_Text"] {
+  color: var(--ctp-overlay2);
+}
+
+div[class*="bottombar_AddGameButton"]:hover div[class*="bottombar_Icon"],
+div[class*="bottombar_FriendsButton"]:hover:not([class*="bottombar_Disabled"]) div[class*="bottombar_Icon"] {
+  color: var(--ctp-subtext0);
+}
+
+div[class*="bottombar_AddGameButton"]:hover div[class*="bottombar_Text"],
+div[class*="bottombar_FriendsButton"]:hover:not([class*="bottombar_Disabled"]) div[class*="bottombar_Text"] {
+  color: var(--ctp-subtext1);
+}
+
+div[class*="bottombar_DownloadStatusContent"] div[class*="bottombar_Icon"] {
+  color: var(--ctp-surface2);
+}
+
+div[class*="bottombar_DownloadStatusContent"] div[class*="bottombar_Queue"] {
+  color: var(--ctp-overlay2);
+}
+
+div[class*="bottombar_DownloadStatusContent"]:hover div[class*="bottombar_Icon"] {
+  color: var(--ctp-subtext0);
+}
+
+div[class*="bottombar_DownloadStatusContent"]:hover div[class*="bottombar_Queue"] {
+  color: var(--ctp-subtext1);
+}
+
+/* ================================================
+   FRIENDS LIST
+   ================================================ */
+
+.friendListHeaderContainer {
+  background: var(--ctp-accent-primary);
+}
+
+.friendListContainer {
+  background: var(--ctp-base);
+}
+
+.friendListEntry {
+  color: var(--ctp-text);
+}
+
+.friendListEntry:hover {
+  background: var(--ctp-surface0);
+}
+
+.friendListEntry.online {
+  color: var(--ctp-green);
+}
+
+.friendListEntry.away {
+  color: var(--ctp-yellow);
+}
+
+.friendListEntry.offline {
+  color: var(--ctp-subtext0);
+}
+
+/* ================================================
+   SCROLLBARS
+   ================================================ */
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--ctp-base);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--ctp-surface1);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--ctp-surface2);
+}
+
+::-webkit-scrollbar-corner {
+  background: var(--ctp-base);
+}
