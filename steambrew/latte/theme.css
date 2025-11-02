@@ -1,0 +1,743 @@
+/*
+ * Catppuccin Latte Theme for Steam
+ * https://github.com/catppuccin/steam
+ * License: MIT
+ */
+
+:root {
+  /* Base Colors */
+  --ctp-rosewater: #dc8a78;
+  --ctp-flamingo: #dd7878;
+  --ctp-pink: #ea76cb;
+  --ctp-mauve: #8839ef;
+  --ctp-red: #d20f39;
+  --ctp-maroon: #e64553;
+  --ctp-peach: #fe640b;
+  --ctp-yellow: #df8e1d;
+  --ctp-green: #40a02b;
+  --ctp-teal: #179299;
+  --ctp-sky: #04a5e5;
+  --ctp-sapphire: #209fb5;
+  --ctp-blue: #1e66f5;
+  --ctp-lavender: #7287fd;
+  
+  /* Text Colors */
+  --ctp-text: #4c4f69;
+  --ctp-subtext1: #5c5f77;
+  --ctp-subtext0: #6c6f85;
+  
+  /* Surface Colors */
+  --ctp-overlay2: #7c7f93;
+  --ctp-overlay1: #8c8fa1;
+  --ctp-overlay0: #9ca0b0;
+  --ctp-surface2: #acb0be;
+  --ctp-surface1: #bcc0cc;
+  --ctp-surface0: #ccd0da;
+  
+  /* Background Colors */
+  --ctp-crust: #dce0e8;
+  --ctp-mantle: #e6e9ef;
+  --ctp-base: #eff1f5;
+  
+  /* Accent Colors */
+  --ctp-accent-primary: #1e66f5;
+  --ctp-accent-hover: #209fb5;
+  --ctp-accent-active: #7287fd;
+  
+  /* State Colors */
+  --ctp-success: #40a02b;
+  --ctp-warning: #df8e1d;
+  --ctp-error: #d20f39;
+  --ctp-info: #04a5e5;
+  
+  /* Border Colors */
+  --ctp-border: #bcc0cc;
+  --ctp-border-hover: #acb0be;
+  
+  /* Shadow Colors */
+  --ctp-shadow: rgba(76, 79, 105, 0.2);
+  --ctp-shadow-strong: rgba(76, 79, 105, 0.4);
+}
+
+/* Disable all shadows */
+* {
+  box-shadow: none !important;
+}
+
+/* ================================================
+   TOP NAVIGATION BAR
+   ================================================ */
+
+/* Main top bar background */
+div[class*="steamdesktop_TopBar"] {
+  background: var(--ctp-mantle);
+}
+
+/* Focus bar highlight */
+div[class*="steamdesktop_FocusBar"][class*="steamdesktop_Focused"] {
+  display: block;
+  background: linear-gradient(to right, transparent 10%, rgba(30, 102, 245, 0.3) 50%, transparent 90%);
+}
+
+/* Root menu buttons (Steam, View, etc.) */
+div[class*="rootmenu_RootMenuButton"] {
+  color: var(--ctp-subtext0);
+}
+
+div[class*="rootmenu_RootMenuButton"]:hover:not([class*="rootmenu_Disabled"]) {
+  color: var(--ctp-subtext1);
+}
+
+/* News/Announcements button */
+div[class*="titlebarcontrols_AnnouncementsButton"] {
+  background-color: var(--ctp-surface1);
+  color: var(--ctp-overlay0);
+}
+
+div[class*="titlebarcontrols_AnnouncementsButton"]:hover {
+  background-color: var(--ctp-overlay0);
+}
+
+div[class*="titlebarcontrols_AnnouncementsButton"]:hover [class*="titlebarcontrols_Icon"] {
+  color: var(--ctp-overlay2);
+}
+
+div[class*="titlebarcontrols_AnnouncementsButton"][class*="titlebarcontrols_Active"] {
+  background-color: var(--ctp-accent-primary);
+  color: var(--ctp-crust);
+}
+
+div[class*="titlebarcontrols_AnnouncementsButton"][class*="titlebarcontrols_Active"]:hover {
+  background-color: rgba(30, 102, 245, 0.8);
+  color: var(--ctp-crust);
+}
+
+/* Notifications button */
+div[class*="titlebarcontrols_NotificationsButton"] {
+  color: var(--ctp-surface0);
+}
+
+div[class*="titlebarcontrols_NotificationsButton"][class*="titlebarcontrols_WasNew"],
+div[class*="titlebarcontrols_NotificationsButton"][class*="titlebarcontrols_NoNew"] {
+  background-color: var(--ctp-surface1);
+}
+
+div[class*="titlebarcontrols_NotificationsButton"][class*="titlebarcontrols_WasNew"]:not([class*="titlebarcontrols_Disabled"]):hover,
+div[class*="titlebarcontrols_NotificationsButton"][class*="titlebarcontrols_NoNew"]:not([class*="titlebarcontrols_Disabled"]):hover {
+  background: var(--ctp-overlay0);
+}
+
+div[class*="titlebarcontrols_NotificationsButton"][class*="titlebarcontrols_NoNew"] [class*="titlebarcontrols_Icon"] {
+  color: var(--ctp-overlay0);
+}
+
+div[class*="titlebarcontrols_NotificationsButton"][class*="titlebarcontrols_NoNew"]:not([class*="titlebarcontrols_Disabled"]):hover [class*="titlebarcontrols_Icon"] {
+  color: var(--ctp-overlay2);
+}
+
+div[class*="titlebarcontrols_NotificationsButton"][class*="titlebarcontrols_HasNew"] {
+  background-color: var(--ctp-green);
+}
+
+div[class*="titlebarcontrols_NotificationsButton"][class*="titlebarcontrols_HasNew"]:not([class*="titlebarcontrols_Disabled"]):hover {
+  background-color: rgba(64, 160, 43, 0.8);
+}
+
+/* Account menu */
+div[class*="titlebarcontrols_AccountMenu_"] {
+  background-color: var(--ctp-surface1);
+}
+
+div[class*="titlebarcontrols_AccountMenu_"].online {
+  color: var(--ctp-blue);
+}
+
+div[class*="titlebarcontrols_AccountMenu_"].online div[class*="steamavatar_avatarStatus"] {
+  background: linear-gradient(to bottom, var(--ctp-blue) 0%, var(--ctp-blue) 30%, var(--ctp-blue) 70%, var(--ctp-blue) 100%);
+}
+
+div[class*="titlebarcontrols_AccountMenu_"]:hover {
+  background-color: var(--ctp-overlay0);
+}
+
+/* Big Picture mode button */
+div[class*="titlebarcontrols_GamepadUIToggle"] {
+  color: var(--ctp-overlay0);
+}
+
+div[class*="titlebarcontrols_GamepadUIToggle"]:hover {
+  background: var(--ctp-surface0);
+}
+
+div[class*="titlebarcontrols_Button"]:hover {
+  color: var(--ctp-text);
+}
+
+/* Window controls (minimize, maximize, close) */
+.title-area-icon-inner rect,
+.title-area-icon-inner line,
+.title-area-icon .SVGIcon_X_Line line {
+  stroke: var(--ctp-overlay0);
+}
+
+.title-area-icon:hover .SVGIcon_Button rect,
+.title-area-icon:hover .SVGIcon_Button line,
+.title-area-icon:hover .SVGIcon_Button polyline {
+  stroke: var(--ctp-text);
+}
+
+.DesktopUI .title-area-icon:hover {
+  background: var(--ctp-surface0);
+}
+
+.DesktopUI .title-area-icon.closeButton:hover {
+  background: var(--ctp-red);
+}
+
+.title-area-icon.closeButton:hover .title-area-icon-inner line {
+  stroke: var(--ctp-crust);
+}
+
+/* Tooltips */
+div[class*="tooltip_TextToolTip"] {
+  background-color: var(--ctp-surface0);
+  color: var(--ctp-text);
+}
+
+/* ================================================
+   SUPER NAVIGATION (Library, Store, etc.)
+   ================================================ */
+
+div[class*="SuperNavMenu"] div[class*="supernav_MenuButton"] {
+  color: var(--ctp-text);
+}
+
+div[class*="SuperNavMenu"]:hover:not([class*="supernav_Disabled"]) div[class*="supernav_MenuButton"] {
+  color: var(--ctp-subtext0);
+}
+
+div[class*="SuperNavMenu"][class*="supernav_Selected"]:not([class*="supernav_Disabled"]) div[class*="supernav_MenuButton"] {
+  color: var(--ctp-accent-primary);
+  text-shadow: 0px 0px 1px var(--ctp-accent-primary);
+}
+
+div[class*="SuperNavMenu"][class*="supernav_Selected"]:not([class*="supernav_Disabled"]) div[class*="supernav_MenuButton"]::after {
+  background: var(--ctp-accent-primary);
+}
+
+[class*="supernav_Arrow"] {
+  color: var(--ctp-overlay2);
+}
+
+[class*="supernav_Arrow"][class*="supernav_Disabled"] {
+  color: var(--ctp-surface1);
+}
+
+[class*="supernav_Arrow"][class*="supernav_Enabled"]:hover {
+  color: var(--ctp-accent-primary);
+}
+
+/* Browser bar */
+div[class*="steamdesktop_BrowserWrapper"] div[class*="steamdesktop_URLBar"] {
+  background: var(--ctp-mantle);
+}
+
+div[class*="steamdesktop_LocalContentContainer"] div[class*="steamdesktop_URLBarReplacement"] {
+  background: var(--ctp-crust);
+}
+
+/* ================================================
+   SIDEBAR / GAME LIST
+   ================================================ */
+
+div[class*="libraryhome_Container"] {
+  background: var(--ctp-crust);
+}
+
+div[class*="library_LibraryWindowDivider"],
+div[class*="gamelistbar_GameListHomeAndSearch"] {
+  background-color: var(--ctp-crust);
+}
+
+div[class*="libraryhome_LibraryHome"],
+div[class*="gamelistbar_Container"] {
+  background-image: none;
+  background-color: var(--ctp-base);
+}
+
+/* Game list entries */
+div[class*="gamelistentry_Container"] {
+  color: var(--ctp-text);
+}
+
+div[class*="gamelistentry_Container"]:hover,
+div[class*="gamelistentry_Container"][class*="gamelistentry_HoverOverlay"] {
+  color: var(--ctp-text);
+  background-color: var(--ctp-surface1);
+}
+
+div[class*="gamelistentry_Container"][class*="gamelistentry_Uninstalled"] {
+  color: var(--ctp-subtext0);
+}
+
+div[class*="gamelistentry_Container"][class*="gamelistentry_Uninstalled"]:hover {
+  color: var(--ctp-subtext1);
+}
+
+div[class*="gamelistentry_Container"][class*="gamelistentry_Uninstalled"][class*="gamelistentry_HoverOverlay"] {
+  color: var(--ctp-subtext1);
+}
+
+div[class*="gamelistentry_Container"][class*="gamelistentry_Selected"][class*="gamelistentry_Uninstalled"] {
+  color: var(--ctp-subtext1);
+}
+
+div[class*="gamelistentry_Container"][class*="gamelistentry_Selected"][class*="gamelistentry_Updating"] {
+  color: var(--ctp-blue);
+}
+
+div[class*="gamelistentry_Container"][class*="gamelistentry_Selected"][class*="gamelistentry_Installed"] {
+  color: var(--ctp-text);
+}
+
+div[class*="gamelistentry_Container"][class*="gamelistentry_Updating"],
+div[class*="gamelistentry_Container"][class*="gamelistentry_Synchronizing"],
+div[class*="gamelistentry_Container"][class*="gamelistentry_CloudError"],
+div[class*="gamelistentry_Container"][class*="gamelistentry_CloudOutOfDate"] {
+  color: var(--ctp-sapphire);
+}
+
+div[class*="gamelistentry_Container"][class*="gamelistentry_Installed"],
+div[class*="gamelistentry_Container"][class*="gamelistentry_InstalledRemotely"] {
+  color: var(--ctp-text);
+}
+
+div[class*="gamelistentry_Container"][class*="gamelistentry_Running"] {
+  color: var(--ctp-green);
+}
+
+div[class*="gamelistentry_Container"][class*="gamelistentry_Running"] div[class*="gamelistentry_DownloadProgress"] {
+  color: rgba(64, 160, 43, 0.75);
+}
+
+div[class*="gamelistentry_Container"] div[class*="gamelistentry_GameListEntryContainer"] div[class*="gamelistentry_DownloadProgress"] {
+  color: var(--ctp-sky);
+}
+
+div[class*="gamelistentry_Container"] div[class*="gamelistentry_GameListEntryContainer"] div[class*="gamelistentry_DownloadDash"] {
+  color: var(--ctp-overlay1);
+}
+
+div[class*="gamelistentry_Selected"] div[class*="gamelistentry_Container"][class*="gamelistentry_Updating"] {
+  color: var(--ctp-sky);
+}
+
+div[class*="gamelistentry_Selected"] div[class*="gamelistentry_Container"][class*="gamelistentry_Uninstalled"] {
+  color: var(--ctp-subtext1);
+}
+
+/* Search bar */
+div[class*="gamelistsearchbar_Container"] div[class*="gamelistsearchbar_SearchInput"] .DialogTextInputBase {
+  background: var(--ctp-surface0);
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="24" height="24" viewBox="0 0 24 24"%3E%3Cpath fill="%236c6f85" d="M9.5 16q-2.725 0-4.612-1.888T3 9.5q0-2.725 1.888-4.612T9.5 3q2.725 0 4.613 1.888T16 9.5q0 1.1-.35 2.075T14.7 13.3l5.6 5.6q.275.275.275.7t-.275.7q-.275.275-.7.275t-.7-.275l-5.6-5.6q-.75.6-1.725.95T9.5 16Zm0-2q1.875 0 3.188-1.312T14 9.5q0-1.875-1.312-3.187T9.5 5Q7.625 5 6.313 6.313T5 9.5q0 1.875 1.313 3.188T9.5 14Z"%2F%3E%3C%2Fsvg%3E');
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-position: 8px center;
+  color: var(--ctp-text);
+}
+
+div[class*="gamelistsearchbar_Container"] div[class*="gamelistsearchbar_SearchInput"] .DialogTextInputBase:hover {
+  background-color: var(--ctp-surface1);
+}
+
+/* Filter icons */
+div[class*="gamelistdropdown_Bar"] div[class*="gamelistdropdown_Filters"] div[class*="gamelistdropdown_CheckboxWithImage"] svg {
+  fill: var(--ctp-overlay0);
+}
+
+div[class*="gamelistdropdown_Bar"] div[class*="gamelistdropdown_Filters"] div[class*="gamelistdropdown_CheckboxWithImage"] svg path,
+div[class*="gamelistdropdown_Bar"] div[class*="gamelistdropdown_Filters"] div[class*="gamelistdropdown_CheckboxWithImage"] svg line,
+div[class*="gamelistdropdown_Bar"] div[class*="gamelistdropdown_Filters"] div[class*="gamelistdropdown_CheckboxWithImage"] svg polyline,
+div[class*="gamelistdropdown_Bar"] div[class*="gamelistdropdown_Filters"] div[class*="gamelistdropdown_CheckboxWithImage"] svg circle {
+  stroke: var(--ctp-overlay0);
+}
+
+div[class*="gamelistdropdown_Bar"] div[class*="gamelistdropdown_Filters"] div[class*="gamelistdropdown_CheckboxWithImage"]:hover svg {
+  fill: var(--ctp-overlay2);
+}
+
+div[class*="gamelistdropdown_Bar"] div[class*="gamelistdropdown_Filters"] div[class*="gamelistdropdown_CheckboxWithImage"]:hover svg path,
+div[class*="gamelistdropdown_Bar"] div[class*="gamelistdropdown_Filters"] div[class*="gamelistdropdown_CheckboxWithImage"]:hover svg line,
+div[class*="gamelistdropdown_Bar"] div[class*="gamelistdropdown_Filters"] div[class*="gamelistdropdown_CheckboxWithImage"]:hover svg polyline,
+div[class*="gamelistdropdown_Bar"] div[class*="gamelistdropdown_Filters"] div[class*="gamelistdropdown_CheckboxWithImage"]:hover svg circle {
+  stroke: var(--ctp-overlay2);
+}
+
+div[class*="gamelistdropdown_Bar"] div[class*="gamelistdropdown_Filters"] div[class*="gamelistdropdown_CheckboxWithImage"][class*="gamelistdropdown_Active"] svg {
+  fill: var(--ctp-blue);
+}
+
+div[class*="gamelistdropdown_Bar"] div[class*="gamelistdropdown_Filters"] div[class*="gamelistdropdown_CheckboxWithImage"][class*="gamelistdropdown_Active"] svg path,
+div[class*="gamelistdropdown_Bar"] div[class*="gamelistdropdown_Filters"] div[class*="gamelistdropdown_CheckboxWithImage"][class*="gamelistdropdown_Active"] svg line,
+div[class*="gamelistdropdown_Bar"] div[class*="gamelistdropdown_Filters"] div[class*="gamelistdropdown_CheckboxWithImage"][class*="gamelistdropdown_Active"] svg polyline,
+div[class*="gamelistdropdown_Bar"] div[class*="gamelistdropdown_Filters"] div[class*="gamelistdropdown_CheckboxWithImage"][class*="gamelistdropdown_Active"] svg circle {
+  stroke: var(--ctp-blue);
+}
+
+div[class*="gamelistdropdown_Bar"] div[class*="gamelistdropdown_Filters"] div[class*="gamelistdropdown_CheckboxWithImage"][class*="gamelistdropdown_Active"]:hover svg {
+  fill: var(--ctp-sapphire);
+}
+
+div[class*="gamelistdropdown_Bar"] div[class*="gamelistdropdown_Filters"] div[class*="gamelistdropdown_CheckboxWithImage"][class*="gamelistdropdown_Active"]:hover svg path,
+div[class*="gamelistdropdown_Bar"] div[class*="gamelistdropdown_Filters"] div[class*="gamelistdropdown_CheckboxWithImage"][class*="gamelistdropdown_Active"]:hover svg line,
+div[class*="gamelistdropdown_Bar"] div[class*="gamelistdropdown_Filters"] div[class*="gamelistdropdown_CheckboxWithImage"][class*="gamelistdropdown_Active"]:hover svg polyline,
+div[class*="gamelistdropdown_Bar"] div[class*="gamelistdropdown_Filters"] div[class*="gamelistdropdown_CheckboxWithImage"][class*="gamelistdropdown_Active"]:hover svg circle {
+  stroke: var(--ctp-sapphire);
+}
+
+/* Advanced search */
+div[class*="gamelistsearchbar_Container"] div[class*="gamelistsearchbar_AdvancedSearchContainer"]:not(.gamelistsearchbar_Disabled_1Gjk2):hover {
+  background-color: var(--ctp-surface0);
+}
+
+div[class*="gamelistsearchbar_Container"] div[class*="gamelistsearchbar_AdvancedSearchContainer"] div[class*="gamelistsearchbar_AdvancedSearchButton"] svg path {
+  fill: var(--ctp-overlay0);
+}
+
+div[class*="gamelistdropdown_Bar"] div[class*="gamelistdropdown_MenuHeader"] {
+  color: var(--ctp-subtext0);
+  background-color: var(--ctp-surface0);
+}
+
+div[class*="gamelistdropdown_Bar"] div[class*="gamelistdropdown_MenuHeader"]:hover {
+  color: var(--ctp-text);
+  background-color: var(--ctp-surface1);
+}
+
+/* ================================================
+   LIBRARY HOME / DETAIL PAGES
+   ================================================ */
+
+div[class*="appportrait_LibraryItemActionButton"][class*="appportrait_Play"]:not([class*="appportrait_Disabled"]) {
+  background: var(--ctp-green) !important;
+}
+
+div[class*="appportrait_LibraryItemActionButton"][class*="appportrait_Play"]:not([class*="appportrait_Disabled"]) [class*="SVGIcon_Play"] {
+  fill: rgba(220, 224, 232, 0.8);
+}
+
+div[class*="appportrait_LibraryItemActionButton"][class*="appportrait_Play"]:hover:not([class*="appportrait_Disabled"]) [class*="SVGIcon_Play"] {
+  fill: var(--ctp-base);
+}
+
+[class*="appportrait_LibraryItemActionButton"] {
+  background: var(--ctp-blue) !important;
+}
+
+[class*="appportrait_LibraryItemActionButton"]:hover:not([class*="appportrait_Disabled"]):not([class*="appportrait_Play"]) {
+  background: var(--ctp-sapphire) !important;
+}
+
+div[class*="appportrait_RecentGameFooter"] {
+  background-color: var(--ctp-surface2);
+}
+
+div[class*="libraryhome_UpdatesContainer"] {
+  background: none;
+  background-color: var(--ctp-base);
+}
+
+/* ================================================
+   DROPDOWNS AND CONTEXT MENUS
+   ================================================ */
+
+div[class*="menu_MenuPopup"] {
+  background: var(--ctp-mantle);
+}
+
+div[class*="menu_MenuItem"][class*="menu_Item"]:hover {
+  background-color: var(--ctp-surface0);
+  color: var(--ctp-accent-primary);
+}
+
+[class*="DesktopUI"] [class*="contextmenu_contextMenuItem"],
+div[class*="contextmenu_ForceDesktop"] [class*="contextmenu_contextMenuItem"] {
+  color: var(--ctp-subtext1);
+}
+
+div[class*="titlebarcontrols_AccountMenuPopup"] [class*="titlebarcontrols_AccountName"],
+div[class*="titlebarcontrols_AccountMenuPopup"] [class*="titlebarcontrols_WalletBalance"] {
+  color: var(--ctp-accent-primary);
+}
+
+/* ================================================
+   NOTIFICATIONS
+   ================================================ */
+
+div[class*="standardtemplates_StandardTemplateDesktop"][class*="standardtemplates_Unread"] {
+  background: var(--ctp-surface0);
+}
+
+div[class*="standardtemplates_StandardTemplateDesktop"][class*="standardtemplates_Unread"]:hover {
+  background: var(--ctp-surface1);
+}
+
+div[class^="titlebarcontrols_NotificationHeader"] [class*="titlebarcontrols_AllNotificationsButton"] {
+  background: var(--ctp-surface1);
+  color: var(--ctp-subtext1);
+}
+
+div[class^="titlebarcontrols_NotificationHeader"] [class*="titlebarcontrols_AllNotificationsButton"]:hover {
+  background-color: var(--ctp-surface0);
+}
+
+div[class*="titlebarcontrols_NotificationsMenu"] {
+  color: var(--ctp-text);
+}
+
+div[class*="titlebarcontrols_EmptyNotificationsBody"] {
+  color: var(--ctp-subtext0) !important;
+}
+
+div[class*="standardtemplates_NewIndicator"] svg {
+  color: var(--ctp-green);
+}
+
+/* ================================================
+   MODALS AND DIALOGS
+   ================================================ */
+
+div.ModalPosition_TopBar {
+  background: linear-gradient(to right, var(--ctp-accent-primary), rgba(30, 102, 245, 0.25));
+}
+
+.DialogContent,
+.DialogContentTransition {
+  background: var(--ctp-base);
+}
+
+.DialogHeader {
+  color: var(--ctp-text);
+}
+
+.DialogBodyText {
+  color: var(--ctp-subtext1);
+}
+
+.DialogCheckbox {
+  background-color: var(--ctp-mantle);
+}
+
+.DialogCheckbox_Container:hover .DialogCheckbox:not(.Disabled),
+.DialogCheckbox:hover:not(.Disabled),
+.DialogCheckbox_Container:focus .DialogCheckbox:not(.Disabled),
+.DialogCheckbox:focus:not(.Disabled) {
+  background-color: var(--ctp-crust);
+}
+
+div[class*="changeuserdialog_Dialog"] .DialogToggle_Label {
+  color: var(--ctp-subtext0);
+}
+
+/* ================================================
+   BUTTONS
+   ================================================ */
+
+button.DialogButton {
+  color: var(--ctp-text);
+  background: var(--ctp-surface0);
+}
+
+button.DialogButton:hover {
+  background: var(--ctp-surface1);
+}
+
+button.DialogButton.Primary {
+  background: var(--ctp-accent-primary);
+  color: var(--ctp-base);
+}
+
+button.DialogButton.Primary:hover {
+  background: none;
+  background-color: rgba(30, 102, 245, 0.85);
+}
+
+button.DialogButton:disabled,
+button.DialogButton.Disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ================================================
+   INPUT FIELDS AND FORMS
+   ================================================ */
+
+.DialogInput,
+.DialogTextInputBase {
+  background-color: var(--ctp-surface0);
+  color: var(--ctp-text);
+  border: 1px solid var(--ctp-border);
+}
+
+.DialogInput:hover,
+.DialogTextInputBase:hover {
+  background-color: var(--ctp-surface1);
+  border-color: var(--ctp-border-hover);
+}
+
+.DialogInput:focus,
+.DialogTextInputBase:focus {
+  background-color: var(--ctp-base);
+  border-color: var(--ctp-accent-primary);
+  outline: none;
+}
+
+.DialogInput::placeholder,
+.DialogTextInputBase::placeholder {
+  color: var(--ctp-subtext0);
+}
+
+/* ================================================
+   BOTTOM BAR
+   ================================================ */
+
+div[class*="bottombar_BottomBar"] {
+  background: var(--ctp-mantle);
+}
+
+div[class*="bottombar_ProgressBarWrapper"] div[class*="bottombar_ProgressBar"] {
+  --color-progress-bar-foreground: var(--ctp-accent-primary);
+  --color-progress-bar-background: var(--ctp-crust);
+}
+
+div[class*="bottombar_AddGameButton"] div[class*="bottombar_Icon"],
+div[class*="bottombar_FriendsButton"] div[class*="bottombar_Icon"] {
+  color: var(--ctp-surface2);
+}
+
+div[class*="bottombar_AddGameButton"] div[class*="bottombar_Text"],
+div[class*="bottombar_FriendsButton"] div[class*="bottombar_Text"] {
+  color: var(--ctp-overlay2);
+}
+
+div[class*="bottombar_AddGameButton"]:hover div[class*="bottombar_Icon"],
+div[class*="bottombar_FriendsButton"]:hover:not([class*="bottombar_Disabled"]) div[class*="bottombar_Icon"] {
+  color: var(--ctp-subtext0);
+}
+
+div[class*="bottombar_AddGameButton"]:hover div[class*="bottombar_Text"],
+div[class*="bottombar_FriendsButton"]:hover:not([class*="bottombar_Disabled"]) div[class*="bottombar_Text"] {
+  color: var(--ctp-subtext1);
+}
+
+div[class*="bottombar_DownloadStatusContent"] div[class*="bottombar_Icon"] {
+  color: var(--ctp-surface2);
+}
+
+div[class*="bottombar_DownloadStatusContent"] div[class*="bottombar_Queue"] {
+  color: var(--ctp-overlay2);
+}
+
+div[class*="bottombar_DownloadStatusContent"]:hover div[class*="bottombar_Icon"] {
+  color: var(--ctp-subtext0);
+}
+
+div[class*="bottombar_DownloadStatusContent"]:hover div[class*="bottombar_Queue"] {
+  color: var(--ctp-subtext1);
+}
+
+/* ================================================
+   FRIENDS LIST
+   ================================================ */
+
+.friendListHeaderContainer {
+  background: var(--ctp-accent-primary);
+}
+
+.friendListContainer {
+  background: var(--ctp-base);
+}
+
+.friendListEntry {
+  color: var(--ctp-text);
+}
+
+.friendListEntry:hover {
+  background: var(--ctp-surface0);
+}
+
+.friendListEntry.online {
+  color: var(--ctp-green);
+}
+
+.friendListEntry.away {
+  color: var(--ctp-yellow);
+}
+
+.friendListEntry.offline {
+  color: var(--ctp-subtext0);
+}
+
+/* ================================================
+   SCROLLBARS
+   ================================================ */
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--ctp-base);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--ctp-surface1);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--ctp-surface2);
+}
+
+::-webkit-scrollbar-corner {
+  background: var(--ctp-base);
+}
+
+/* ================================================
+   MISC UI ELEMENTS
+   ================================================ */
+
+.Panel {
+  background: var(--ctp-base);
+}
+
+.PanelSection {
+  background: var(--ctp-surface0);
+}
+
+.highlight {
+  color: var(--ctp-accent-primary);
+}
+
+.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+a,
+.link {
+  color: var(--ctp-accent-primary);
+  text-decoration: none;
+}
+
+a:hover,
+.link:hover {
+  color: var(--ctp-accent-hover);
+  text-decoration: underline;
+}
+
+a:active,
+.link:active {
+  color: var(--ctp-accent-active);
+}
