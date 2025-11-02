@@ -1,0 +1,65 @@
+/*
+ * Catppuccin Latte - Color Variables
+ * https://github.com/catppuccin/steam
+ * License: MIT
+ */
+
+:root {
+  /* Base Colors */
+  --ctp-rosewater: #dc8a78;
+  --ctp-flamingo: #dd7878;
+  --ctp-pink: #ea76cb;
+  --ctp-mauve: #8839ef;
+  --ctp-red: #d20f39;
+  --ctp-maroon: #e64553;
+  --ctp-peach: #fe640b;
+  --ctp-yellow: #df8e1d;
+  --ctp-green: #40a02b;
+  --ctp-teal: #179299;
+  --ctp-sky: #04a5e5;
+  --ctp-sapphire: #209fb5;
+  --ctp-blue: #1e66f5;
+  --ctp-lavender: #7287fd;
+  
+  /* Text Colors */
+  --ctp-text: #4c4f69;
+  --ctp-subtext1: #5c5f77;
+  --ctp-subtext0: #6c6f85;
+  
+  /* Surface Colors */
+  --ctp-overlay2: #7c7f93;
+  --ctp-overlay1: #8c8fa1;
+  --ctp-overlay0: #9ca0b0;
+  --ctp-surface2: #acb0be;
+  --ctp-surface1: #bcc0cc;
+  --ctp-surface0: #ccd0da;
+  
+  /* Background Colors */
+  --ctp-crust: #dce0e8;
+  --ctp-mantle: #e6e9ef;
+  --ctp-base: #eff1f5;
+  
+  /* Accent Colors */
+  --ctp-accent-primary: #1e66f5;
+  --ctp-accent-hover: #209fb5;
+  --ctp-accent-active: #7287fd;
+  
+  /* State Colors */
+  --ctp-success: #40a02b;
+  --ctp-warning: #df8e1d;
+  --ctp-error: #d20f39;
+  --ctp-info: #04a5e5;
+  
+  /* Border Colors */
+  --ctp-border: #bcc0cc;
+  --ctp-border-hover: #acb0be;
+  
+  /* Shadow Colors */
+  --ctp-shadow: rgba(76, 79, 105, 0.2);
+  --ctp-shadow-strong: rgba(76, 79, 105, 0.4);
+}
+
+/* Disable all shadows for cleaner look */
+* {
+  box-shadow: none !important;
+}

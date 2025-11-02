@@ -1,0 +1,166 @@
+/*
+ * Component Styles - Catppuccin Latte
+ * Buttons, inputs, dropdowns, modals, and other reusable UI components
+ */
+
+/* ================================================
+   BUTTONS
+   ================================================ */
+
+button.DialogButton {
+  color: var(--ctp-text);
+  background: var(--ctp-surface0);
+  transition: background 0.2s ease;
+}
+
+button.DialogButton:hover {
+  background: var(--ctp-surface1);
+}
+
+button.DialogButton.Primary {
+  background: var(--ctp-accent-primary);
+  color: var(--ctp-base);
+}
+
+button.DialogButton.Primary:hover {
+  background: none;
+  background-color: rgba(30, 102, 245, 0.85);
+}
+
+button.DialogButton:disabled,
+button.DialogButton.Disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ================================================
+   INPUT FIELDS AND FORMS
+   ================================================ */
+
+.DialogInput,
+.DialogTextInputBase {
+  background-color: var(--ctp-surface0);
+  color: var(--ctp-text);
+  border: 1px solid var(--ctp-border);
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.DialogInput:hover,
+.DialogTextInputBase:hover {
+  background-color: var(--ctp-surface1);
+  border-color: var(--ctp-border-hover);
+}
+
+.DialogInput:focus,
+.DialogTextInputBase:focus {
+  background-color: var(--ctp-base);
+  border-color: var(--ctp-accent-primary);
+  outline: none;
+}
+
+.DialogInput::placeholder,
+.DialogTextInputBase::placeholder {
+  color: var(--ctp-subtext0);
+}
+
+/* ================================================
+   MODALS AND DIALOGS
+   ================================================ */
+
+div.ModalPosition_TopBar {
+  background: linear-gradient(to right, var(--ctp-accent-primary), rgba(30, 102, 245, 0.25));
+}
+
+.DialogContent,
+.DialogContentTransition {
+  background: var(--ctp-base);
+}
+
+.DialogHeader {
+  color: var(--ctp-text);
+}
+
+.DialogBodyText {
+  color: var(--ctp-subtext1);
+}
+
+.DialogCheckbox {
+  background-color: var(--ctp-mantle);
+}
+
+.DialogCheckbox_Container:hover .DialogCheckbox:not(.Disabled),
+.DialogCheckbox:hover:not(.Disabled),
+.DialogCheckbox_Container:focus .DialogCheckbox:not(.Disabled),
+.DialogCheckbox:focus:not(.Disabled) {
+  background-color: var(--ctp-crust);
+}
+
+div[class*="changeuserdialog_Dialog"] .DialogToggle_Label {
+  color: var(--ctp-subtext0);
+}
+
+/* ================================================
+   DROPDOWNS AND CONTEXT MENUS
+   ================================================ */
+
+div[class*="menu_MenuPopup"] {
+  background: var(--ctp-mantle);
+}
+
+div[class*="menu_MenuItem"][class*="menu_Item"]:hover {
+  background-color: var(--ctp-surface0);
+  color: var(--ctp-accent-primary);
+}
+
+[class*="DesktopUI"] [class*="contextmenu_contextMenuItem"],
+div[class*="contextmenu_ForceDesktop"] [class*="contextmenu_contextMenuItem"] {
+  color: var(--ctp-subtext1);
+}
+
+div[class*="titlebarcontrols_AccountMenuPopup"] [class*="titlebarcontrols_AccountName"],
+div[class*="titlebarcontrols_AccountMenuPopup"] [class*="titlebarcontrols_WalletBalance"] {
+  color: var(--ctp-accent-primary);
+}
+
+/* ================================================
+   PANELS AND SECTIONS
+   ================================================ */
+
+.Panel {
+  background: var(--ctp-base);
+}
+
+.PanelSection {
+  background: var(--ctp-surface0);
+}
+
+/* ================================================
+   MISC UI ELEMENTS
+   ================================================ */
+
+.highlight {
+  color: var(--ctp-accent-primary);
+}
+
+.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+a,
+.link {
+  color: var(--ctp-accent-primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover,
+.link:hover {
+  color: var(--ctp-accent-hover);
+  text-decoration: underline;
+}
+
+a:active,
+.link:active {
+  color: var(--ctp-accent-active);
+}

@@ -1,0 +1,420 @@
+/*
+ * Settings Page Overrides - Catppuccin Macchiato
+ */
+
+/* ================================================
+   SETTINGS PAGE CONTAINER
+   ================================================ */
+
+div[class*="settings_SettingsPage"],
+div[class*="settings_Container"] {
+  background: var(--ctp-base);
+  color: var(--ctp-text);
+}
+
+/* ================================================
+   SETTINGS NAVIGATION
+   ================================================ */
+
+div[class*="settings_Navigation"],
+div[class*="settings_Sidebar"] {
+  background: var(--ctp-mantle);
+}
+
+div[class*="settings_NavItem"],
+div[class*="settings_MenuItem"] {
+  color: var(--ctp-subtext0);
+}
+
+div[class*="settings_NavItem"]:hover,
+div[class*="settings_MenuItem"]:hover {
+  color: var(--ctp-text);
+  background: var(--ctp-surface0);
+}
+
+div[class*="settings_NavItem"][class*="settings_Active"],
+div[class*="settings_MenuItem"][class*="settings_Active"] {
+  color: var(--ctp-accent-primary);
+  background: var(--ctp-surface0);
+  border-left: 3px solid var(--ctp-accent-primary);
+}
+
+/* ================================================
+   SETTINGS SECTIONS
+   ================================================ */
+
+div[class*="settings_Section"] {
+  background: var(--ctp-surface0);
+  border: 1px solid var(--ctp-border);
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+div[class*="settings_SectionHeader"] {
+  color: var(--ctp-text);
+  border-bottom: 1px solid var(--ctp-border);
+  padding: 12px 16px;
+  font-weight: 600;
+}
+
+div[class*="settings_SectionContent"] {
+  padding: 16px;
+}
+
+/* ================================================
+   SETTINGS CONTROLS
+   ================================================ */
+
+div[class*="settings_ControlRow"] {
+  border-bottom: 1px solid var(--ctp-border);
+  padding: 12px 0;
+}
+
+div[class*="settings_ControlRow"]:last-child {
+  border-bottom: none;
+}
+
+div[class*="settings_ControlLabel"] {
+  color: var(--ctp-text);
+  font-weight: 500;
+}
+
+div[class*="settings_ControlDescription"] {
+  color: var(--ctp-subtext1);
+  font-size: 12px;
+}
+
+/* ================================================
+   TOGGLE SWITCHES
+   ================================================ */
+
+div[class*="settings_Toggle"],
+.Toggle {
+  background: var(--ctp-surface1);
+  border: 1px solid var(--ctp-border);
+}
+
+div[class*="settings_Toggle"]:hover,
+.Toggle:hover {
+  background: var(--ctp-surface2);
+}
+
+div[class*="settings_Toggle"][class*="settings_Active"],
+.Toggle.active {
+  background: var(--ctp-accent-primary);
+  border-color: var(--ctp-accent-primary);
+}
+
+div[class*="settings_ToggleThumb"],
+.Toggle_Thumb {
+  background: var(--ctp-base);
+}
+
+/* ================================================
+   DROPDOWN SELECTS
+   ================================================ */
+
+div[class*="settings_Select"],
+select {
+  background: var(--ctp-surface0);
+  color: var(--ctp-text);
+  border: 1px solid var(--ctp-border);
+}
+
+div[class*="settings_Select"]:hover,
+select:hover {
+  background: var(--ctp-surface1);
+  border-color: var(--ctp-border-hover);
+}
+
+div[class*="settings_Select"]:focus,
+select:focus {
+  border-color: var(--ctp-accent-primary);
+  outline: none;
+}
+
+div[class*="settings_SelectOption"],
+option {
+  background: var(--ctp-surface0);
+  color: var(--ctp-text);
+}
+
+div[class*="settings_SelectOption"]:hover,
+option:hover {
+  background: var(--ctp-surface1);
+}
+
+div[class*="settings_SelectOption"][class*="settings_Selected"],
+option:checked {
+  background: var(--ctp-accent-primary);
+  color: var(--ctp-base);
+}
+
+/* ================================================
+   SLIDERS
+   ================================================ */
+
+div[class*="settings_Slider"],
+input[type="range"] {
+  background: var(--ctp-surface0);
+}
+
+div[class*="settings_SliderTrack"],
+input[type="range"]::-webkit-slider-runnable-track {
+  background: var(--ctp-surface1);
+  height: 4px;
+  border-radius: 2px;
+}
+
+div[class*="settings_SliderFill"],
+input[type="range"]::-webkit-slider-runnable-track::before {
+  background: var(--ctp-accent-primary);
+}
+
+div[class*="settings_SliderThumb"],
+input[type="range"]::-webkit-slider-thumb {
+  background: var(--ctp-accent-primary);
+  border: 2px solid var(--ctp-base);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+}
+
+div[class*="settings_SliderThumb"]:hover,
+input[type="range"]::-webkit-slider-thumb:hover {
+  background: var(--ctp-accent-hover);
+}
+
+input[type="range"]::-moz-range-track {
+  background: var(--ctp-surface1);
+  height: 4px;
+  border-radius: 2px;
+}
+
+input[type="range"]::-moz-range-thumb {
+  background: var(--ctp-accent-primary);
+  border: 2px solid var(--ctp-base);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+}
+
+/* ================================================
+   CHECKBOXES AND RADIO BUTTONS
+   ================================================ */
+
+div[class*="settings_Checkbox"],
+input[type="checkbox"] {
+  background: var(--ctp-surface0);
+  border: 1px solid var(--ctp-border);
+}
+
+div[class*="settings_Checkbox"]:hover,
+input[type="checkbox"]:hover {
+  background: var(--ctp-surface1);
+}
+
+div[class*="settings_Checkbox"][class*="settings_Checked"],
+input[type="checkbox"]:checked {
+  background: var(--ctp-accent-primary);
+  border-color: var(--ctp-accent-primary);
+}
+
+div[class*="settings_Radio"],
+input[type="radio"] {
+  background: var(--ctp-surface0);
+  border: 1px solid var(--ctp-border);
+}
+
+div[class*="settings_Radio"]:hover,
+input[type="radio"]:hover {
+  background: var(--ctp-surface1);
+}
+
+div[class*="settings_Radio"][class*="settings_Checked"],
+input[type="radio"]:checked {
+  background: var(--ctp-accent-primary);
+  border-color: var(--ctp-accent-primary);
+}
+
+/* ================================================
+   KEYBIND INPUTS
+   ================================================ */
+
+div[class*="settings_KeybindInput"] {
+  background: var(--ctp-surface0);
+  color: var(--ctp-text);
+  border: 1px solid var(--ctp-border);
+  font-family: var(--font-family-mono);
+}
+
+div[class*="settings_KeybindInput"]:hover {
+  background: var(--ctp-surface1);
+}
+
+div[class*="settings_KeybindInput"][class*="settings_Recording"] {
+  border-color: var(--ctp-accent-primary);
+  background: var(--ctp-surface1);
+}
+
+/* ================================================
+   COLOR PICKER
+   ================================================ */
+
+div[class*="settings_ColorPicker"] {
+  background: var(--ctp-surface0);
+  border: 1px solid var(--ctp-border);
+}
+
+div[class*="settings_ColorSwatch"] {
+  border: 2px solid var(--ctp-border);
+}
+
+div[class*="settings_ColorSwatch"]:hover {
+  border-color: var(--ctp-accent-primary);
+}
+
+/* ================================================
+   ACCOUNT SETTINGS
+   ================================================ */
+
+div[class*="settings_AccountSection"] {
+  background: var(--ctp-surface0);
+}
+
+div[class*="settings_AccountAvatar"] {
+  border: 3px solid var(--ctp-accent-primary);
+}
+
+div[class*="settings_AccountName"] {
+  color: var(--ctp-text);
+  font-weight: 600;
+}
+
+div[class*="settings_AccountEmail"] {
+  color: var(--ctp-subtext1);
+}
+
+/* ================================================
+   PRIVACY SETTINGS
+   ================================================ */
+
+div[class*="settings_PrivacyOption"] {
+  background: var(--ctp-surface0);
+  border: 1px solid var(--ctp-border);
+}
+
+div[class*="settings_PrivacyOption"]:hover {
+  background: var(--ctp-surface1);
+}
+
+div[class*="settings_PrivacyWarning"] {
+  background: rgba(238, 212, 159, 0.2);
+  border-left: 3px solid var(--ctp-yellow);
+  color: var(--ctp-text);
+}
+
+/* ================================================
+   DOWNLOAD SETTINGS
+   ================================================ */
+
+div[class*="settings_DownloadRegion"] {
+  background: var(--ctp-surface0);
+  border: 1px solid var(--ctp-border);
+}
+
+div[class*="settings_DownloadRegion"][class*="settings_Selected"] {
+  background: var(--ctp-surface1);
+  border-color: var(--ctp-accent-primary);
+}
+
+div[class*="settings_BandwidthLimit"] {
+  color: var(--ctp-text);
+}
+
+/* ================================================
+   NOTIFICATION SETTINGS
+   ================================================ */
+
+div[class*="settings_NotificationOption"] {
+  background: var(--ctp-surface0);
+}
+
+div[class*="settings_NotificationOption"]:hover {
+  background: var(--ctp-surface1);
+}
+
+div[class*="settings_NotificationEnabled"] {
+  color: var(--ctp-green);
+}
+
+div[class*="settings_NotificationDisabled"] {
+  color: var(--ctp-subtext0);
+}
+
+/* ================================================
+   DANGER ZONE
+   ================================================ */
+
+div[class*="settings_DangerZone"] {
+  background: rgba(237, 135, 150, 0.1);
+  border: 1px solid var(--ctp-red);
+}
+
+div[class*="settings_DangerButton"] {
+  background: var(--ctp-red);
+  color: var(--ctp-base);
+}
+
+div[class*="settings_DangerButton"]:hover {
+  background: rgba(237, 135, 150, 0.85);
+}
+
+/* ================================================
+   SAVE AND RESET BUTTONS
+   ================================================ */
+
+div[class*="settings_SaveButton"] {
+  background: var(--ctp-green);
+  color: var(--ctp-base);
+}
+
+div[class*="settings_SaveButton"]:hover {
+  background: rgba(166, 218, 149, 0.85);
+}
+
+div[class*="settings_ResetButton"] {
+  background: var(--ctp-surface0);
+  color: var(--ctp-text);
+}
+
+div[class*="settings_ResetButton"]:hover {
+  background: var(--ctp-surface1);
+}
+
+/* ================================================
+   SEARCH IN SETTINGS
+   ================================================ */
+
+div[class*="settings_SearchBar"] {
+  background: var(--ctp-surface0);
+  border: 1px solid var(--ctp-border);
+}
+
+div[class*="settings_SearchBar"]:focus-within {
+  border-color: var(--ctp-accent-primary);
+}
+
+div[class*="settings_SearchResults"] {
+  background: var(--ctp-mantle);
+  border: 1px solid var(--ctp-border);
+}
+
+div[class*="settings_SearchResultItem"] {
+  color: var(--ctp-text);
+}
+
+div[class*="settings_SearchResultItem"]:hover {
+  background: var(--ctp-surface0);
+  color: var(--ctp-accent-primary);
+}

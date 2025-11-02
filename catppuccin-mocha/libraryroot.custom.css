@@ -1,0 +1,19 @@
+/*
+ * Catppuccin Mocha Theme for Steam Homebrew
+ * Main CSS Entry Point
+ * https://github.com/catppuccin/steam
+ * License: MIT
+ */
+
+/* Import color variables first */
+@import url('./src/styles/variables.css');
+
+/* Import frame and navigation styles */
+@import url('./src/styles/frame.css');
+
+/* Import component/area styles */
+@import url('./src/styles/library.css');
+@import url('./src/styles/store.css');
+@import url('./src/styles/community.css');
+@import url('./src/styles/components.css');
+@import url('./src/styles/settings.css');
