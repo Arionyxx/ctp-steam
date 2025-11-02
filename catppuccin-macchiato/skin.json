@@ -1,0 +1,13 @@
+{
+  "name": "Catppuccin Macchiato",
+  "version": "1.0.0",
+  "author": "Catppuccin",
+  "description": "🌺 Soothing pastel theme for Steam Homebrew - Macchiato flavor (Darker Blue-Gray)",
+  "homepage": "https://github.com/catppuccin/steam",
+  "license": "MIT",
+  "target": "Steam Client",
+  "tags": ["dark", "pastel", "catppuccin", "macchiato"],
+  "compatibility": {
+    "steamHomebrew": ">=1.0.0"
+  }
+}
