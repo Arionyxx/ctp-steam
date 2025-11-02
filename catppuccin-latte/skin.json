@@ -1,0 +1,13 @@
+{
+  "name": "Catppuccin Latte",
+  "version": "1.0.0",
+  "author": "Catppuccin",
+  "description": "☕ Soothing pastel theme for Steam Homebrew - Latte flavor (Light)",
+  "homepage": "https://github.com/catppuccin/steam",
+  "license": "MIT",
+  "target": "Steam Client",
+  "tags": ["light", "pastel", "catppuccin", "latte"],
+  "compatibility": {
+    "steamHomebrew": ">=1.0.0"
+  }
+}

@@ -1,0 +1,282 @@
+/*
+ * Library View Styles - Catppuccin Macchiato
+ */
+
+/* ================================================
+   LIBRARY CONTAINER
+   ================================================ */
+
+div[class*="libraryhome_Container"] {
+  background: var(--ctp-crust);
+}
+
+div[class*="library_LibraryWindowDivider"],
+div[class*="gamelistbar_GameListHomeAndSearch"] {
+  background-color: var(--ctp-crust);
+}
+
+div[class*="libraryhome_LibraryHome"],
+div[class*="gamelistbar_Container"] {
+  background-image: none;
+  background-color: var(--ctp-base);
+}
+
+/* ================================================
+   GAME LIST ENTRIES
+   ================================================ */
+
+div[class*="gamelistentry_Container"] {
+  color: var(--ctp-text);
+}
+
+div[class*="gamelistentry_Container"]:hover,
+div[class*="gamelistentry_Container"][class*="gamelistentry_HoverOverlay"] {
+  color: var(--ctp-text);
+  background-color: var(--ctp-surface1);
+}
+
+div[class*="gamelistentry_Container"][class*="gamelistentry_Uninstalled"] {
+  color: var(--ctp-subtext0);
+}
+
+div[class*="gamelistentry_Container"][class*="gamelistentry_Uninstalled"]:hover {
+  color: var(--ctp-subtext1);
+}
+
+div[class*="gamelistentry_Container"][class*="gamelistentry_Uninstalled"][class*="gamelistentry_HoverOverlay"] {
+  color: var(--ctp-subtext1);
+}
+
+div[class*="gamelistentry_Container"][class*="gamelistentry_Selected"][class*="gamelistentry_Uninstalled"] {
+  color: var(--ctp-subtext1);
+}
+
+div[class*="gamelistentry_Container"][class*="gamelistentry_Selected"][class*="gamelistentry_Updating"] {
+  color: var(--ctp-blue);
+}
+
+div[class*="gamelistentry_Container"][class*="gamelistentry_Selected"][class*="gamelistentry_Installed"] {
+  color: var(--ctp-text);
+}
+
+div[class*="gamelistentry_Container"][class*="gamelistentry_Updating"],
+div[class*="gamelistentry_Container"][class*="gamelistentry_Synchronizing"],
+div[class*="gamelistentry_Container"][class*="gamelistentry_CloudError"],
+div[class*="gamelistentry_Container"][class*="gamelistentry_CloudOutOfDate"] {
+  color: var(--ctp-sapphire);
+}
+
+div[class*="gamelistentry_Container"][class*="gamelistentry_Installed"],
+div[class*="gamelistentry_Container"][class*="gamelistentry_InstalledRemotely"] {
+  color: var(--ctp-text);
+}
+
+div[class*="gamelistentry_Container"][class*="gamelistentry_Running"] {
+  color: var(--ctp-green);
+}
+
+div[class*="gamelistentry_Container"][class*="gamelistentry_Running"] div[class*="gamelistentry_DownloadProgress"] {
+  color: rgba(166, 218, 149, 0.75);
+}
+
+div[class*="gamelistentry_Container"] div[class*="gamelistentry_GameListEntryContainer"] div[class*="gamelistentry_DownloadProgress"] {
+  color: var(--ctp-sky);
+}
+
+div[class*="gamelistentry_Container"] div[class*="gamelistentry_GameListEntryContainer"] div[class*="gamelistentry_DownloadDash"] {
+  color: var(--ctp-overlay1);
+}
+
+div[class*="gamelistentry_Selected"] div[class*="gamelistentry_Container"][class*="gamelistentry_Updating"] {
+  color: var(--ctp-sky);
+}
+
+div[class*="gamelistentry_Selected"] div[class*="gamelistentry_Container"][class*="gamelistentry_Uninstalled"] {
+  color: var(--ctp-subtext1);
+}
+
+/* ================================================
+   SEARCH BAR
+   ================================================ */
+
+div[class*="gamelistsearchbar_Container"] div[class*="gamelistsearchbar_SearchInput"] .DialogTextInputBase {
+  background: var(--ctp-surface0);
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="24" height="24" viewBox="0 0 24 24"%3E%3Cpath fill="%23a5adcb" d="M9.5 16q-2.725 0-4.612-1.888T3 9.5q0-2.725 1.888-4.612T9.5 3q2.725 0 4.613 1.888T16 9.5q0 1.1-.35 2.075T14.7 13.3l5.6 5.6q.275.275.275.7t-.275.7q-.275.275-.7.275t-.7-.275l-5.6-5.6q-.75.6-1.725.95T9.5 16Zm0-2q1.875 0 3.188-1.312T14 9.5q0-1.875-1.312-3.187T9.5 5Q7.625 5 6.313 6.313T5 9.5q0 1.875 1.313 3.188T9.5 14Z"%2F%3E%3C%2Fsvg%3E');
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-position: 8px center;
+  color: var(--ctp-text);
+}
+
+div[class*="gamelistsearchbar_Container"] div[class*="gamelistsearchbar_SearchInput"] .DialogTextInputBase:hover {
+  background-color: var(--ctp-surface1);
+}
+
+/* ================================================
+   FILTER ICONS
+   ================================================ */
+
+div[class*="gamelistdropdown_Bar"] div[class*="gamelistdropdown_Filters"] div[class*="gamelistdropdown_CheckboxWithImage"] svg {
+  fill: var(--ctp-overlay0);
+}
+
+div[class*="gamelistdropdown_Bar"] div[class*="gamelistdropdown_Filters"] div[class*="gamelistdropdown_CheckboxWithImage"] svg path,
+div[class*="gamelistdropdown_Bar"] div[class*="gamelistdropdown_Filters"] div[class*="gamelistdropdown_CheckboxWithImage"] svg line,
+div[class*="gamelistdropdown_Bar"] div[class*="gamelistdropdown_Filters"] div[class*="gamelistdropdown_CheckboxWithImage"] svg polyline,
+div[class*="gamelistdropdown_Bar"] div[class*="gamelistdropdown_Filters"] div[class*="gamelistdropdown_CheckboxWithImage"] svg circle {
+  stroke: var(--ctp-overlay0);
+}
+
+div[class*="gamelistdropdown_Bar"] div[class*="gamelistdropdown_Filters"] div[class*="gamelistdropdown_CheckboxWithImage"]:hover svg {
+  fill: var(--ctp-overlay2);
+}
+
+div[class*="gamelistdropdown_Bar"] div[class*="gamelistdropdown_Filters"] div[class*="gamelistdropdown_CheckboxWithImage"]:hover svg path,
+div[class*="gamelistdropdown_Bar"] div[class*="gamelistdropdown_Filters"] div[class*="gamelistdropdown_CheckboxWithImage"]:hover svg line,
+div[class*="gamelistdropdown_Bar"] div[class*="gamelistdropdown_Filters"] div[class*="gamelistdropdown_CheckboxWithImage"]:hover svg polyline,
+div[class*="gamelistdropdown_Bar"] div[class*="gamelistdropdown_Filters"] div[class*="gamelistdropdown_CheckboxWithImage"]:hover svg circle {
+  stroke: var(--ctp-overlay2);
+}
+
+div[class*="gamelistdropdown_Bar"] div[class*="gamelistdropdown_Filters"] div[class*="gamelistdropdown_CheckboxWithImage"][class*="gamelistdropdown_Active"] svg {
+  fill: var(--ctp-blue);
+}
+
+div[class*="gamelistdropdown_Bar"] div[class*="gamelistdropdown_Filters"] div[class*="gamelistdropdown_CheckboxWithImage"][class*="gamelistdropdown_Active"] svg path,
+div[class*="gamelistdropdown_Bar"] div[class*="gamelistdropdown_Filters"] div[class*="gamelistdropdown_CheckboxWithImage"][class*="gamelistdropdown_Active"] svg line,
+div[class*="gamelistdropdown_Bar"] div[class*="gamelistdropdown_Filters"] div[class*="gamelistdropdown_CheckboxWithImage"][class*="gamelistdropdown_Active"] svg polyline,
+div[class*="gamelistdropdown_Bar"] div[class*="gamelistdropdown_Filters"] div[class*="gamelistdropdown_CheckboxWithImage"][class*="gamelistdropdown_Active"] svg circle {
+  stroke: var(--ctp-blue);
+}
+
+div[class*="gamelistdropdown_Bar"] div[class*="gamelistdropdown_Filters"] div[class*="gamelistdropdown_CheckboxWithImage"][class*="gamelistdropdown_Active"]:hover svg {
+  fill: var(--ctp-sapphire);
+}
+
+div[class*="gamelistdropdown_Bar"] div[class*="gamelistdropdown_Filters"] div[class*="gamelistdropdown_CheckboxWithImage"][class*="gamelistdropdown_Active"]:hover svg path,
+div[class*="gamelistdropdown_Bar"] div[class*="gamelistdropdown_Filters"] div[class*="gamelistdropdown_CheckboxWithImage"][class*="gamelistdropdown_Active"]:hover svg line,
+div[class*="gamelistdropdown_Bar"] div[class*="gamelistdropdown_Filters"] div[class*="gamelistdropdown_CheckboxWithImage"][class*="gamelistdropdown_Active"]:hover svg polyline,
+div[class*="gamelistdropdown_Bar"] div[class*="gamelistdropdown_Filters"] div[class*="gamelistdropdown_CheckboxWithImage"][class*="gamelistdropdown_Active"]:hover svg circle {
+  stroke: var(--ctp-sapphire);
+}
+
+div[class*="gamelistsearchbar_Container"] div[class*="gamelistsearchbar_AdvancedSearchContainer"]:not(.gamelistsearchbar_Disabled_1Gjk2):hover {
+  background-color: var(--ctp-surface0);
+}
+
+div[class*="gamelistsearchbar_Container"] div[class*="gamelistsearchbar_AdvancedSearchContainer"] div[class*="gamelistsearchbar_AdvancedSearchButton"] svg path {
+  fill: var(--ctp-overlay0);
+}
+
+div[class*="gamelistdropdown_Bar"] div[class*="gamelistdropdown_MenuHeader"] {
+  color: var(--ctp-subtext0);
+  background-color: var(--ctp-surface0);
+}
+
+div[class*="gamelistdropdown_Bar"] div[class*="gamelistdropdown_MenuHeader"]:hover {
+  color: var(--ctp-text);
+  background-color: var(--ctp-surface1);
+}
+
+/* ================================================
+   GAME DETAIL PAGES
+   ================================================ */
+
+div[class*="appportrait_LibraryItemActionButton"][class*="appportrait_Play"]:not([class*="appportrait_Disabled"]) {
+  background: var(--ctp-green) !important;
+}
+
+div[class*="appportrait_LibraryItemActionButton"][class*="appportrait_Play"]:not([class*="appportrait_Disabled"]) [class*="SVGIcon_Play"] {
+  fill: rgba(24, 25, 38, 0.8);
+}
+
+div[class*="appportrait_LibraryItemActionButton"][class*="appportrait_Play"]:hover:not([class*="appportrait_Disabled"]) [class*="SVGIcon_Play"] {
+  fill: var(--ctp-base);
+}
+
+[class*="appportrait_LibraryItemActionButton"] {
+  background: var(--ctp-blue) !important;
+}
+
+[class*="appportrait_LibraryItemActionButton"]:hover:not([class*="appportrait_Disabled"]):not([class*="appportrait_Play"]) {
+  background: var(--ctp-sapphire) !important;
+}
+
+div[class*="appportrait_RecentGameFooter"] {
+  background-color: var(--ctp-surface2);
+}
+
+div[class*="libraryhome_UpdatesContainer"] {
+  background: none;
+  background-color: var(--ctp-base);
+}
+
+/* ================================================
+   COLLECTIONS AND CATEGORIES
+   ================================================ */
+
+div[class*="collectionview_CollectionListEntry"],
+div[class*="gamelist_CollectionListEntry"] {
+  background: var(--ctp-surface0);
+  color: var(--ctp-text);
+}
+
+div[class*="collectionview_CollectionListEntry"]:hover,
+div[class*="gamelist_CollectionListEntry"]:hover {
+  background: var(--ctp-surface1);
+}
+
+div[class*="collectionview_CollectionListEntry"][class*="Selected"],
+div[class*="gamelist_CollectionListEntry"][class*="Selected"] {
+  background: var(--ctp-accent-primary);
+  color: var(--ctp-base);
+}
+
+/* ================================================
+   DOWNLOADS AND UPDATES
+   ================================================ */
+
+div[class*="downloadstatus_DownloadProgressBar"] {
+  background: var(--ctp-crust);
+}
+
+div[class*="downloadstatus_DownloadProgressBar"] div[class*="downloadstatus_ProgressFill"] {
+  background: var(--ctp-accent-primary);
+}
+
+div[class*="downloadstatus_DownloadItem"] {
+  background: var(--ctp-surface0);
+  color: var(--ctp-text);
+}
+
+div[class*="downloadstatus_DownloadItem"]:hover {
+  background: var(--ctp-surface1);
+}
+
+div[class*="downloadstatus_DownloadPaused"] {
+  color: var(--ctp-yellow);
+}
+
+div[class*="downloadstatus_DownloadActive"] {
+  color: var(--ctp-green);
+}
+
+/* ================================================
+   GRID VIEW
+   ================================================ */
+
+div[class*="gamepadlibrary_GameListGrid"],
+div[class*="libraryhome_GridView"] {
+  background: var(--ctp-base);
+}
+
+div[class*="gamepadlibrary_GameCard"],
+div[class*="libraryhome_GameCard"] {
+  background: var(--ctp-surface0);
+}
+
+div[class*="gamepadlibrary_GameCard"]:hover,
+div[class*="libraryhome_GameCard"]:hover {
+  background: var(--ctp-surface1);
+  transform: translateY(-2px);
+}

@@ -1,0 +1,13 @@
+{
+  "name": "Catppuccin Frappé",
+  "version": "1.0.0",
+  "author": "Catppuccin",
+  "description": "🪴 Soothing pastel theme for Steam Homebrew - Frappé flavor (Dark Blue-Gray)",
+  "homepage": "https://github.com/catppuccin/steam",
+  "license": "MIT",
+  "target": "Steam Client",
+  "tags": ["dark", "pastel", "catppuccin", "frappe"],
+  "compatibility": {
+    "steamHomebrew": ">=1.0.0"
+  }
+}

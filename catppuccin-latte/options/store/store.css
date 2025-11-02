@@ -1,0 +1,248 @@
+/*
+ * Store Page Styles - Catppuccin Latte
+ */
+
+/* ================================================
+   STORE HOMEPAGE
+   ================================================ */
+
+div[class*="store_StorePage"],
+div[class*="store_StoreHomePage"] {
+  background: var(--ctp-base);
+  color: var(--ctp-text);
+}
+
+div[class*="store_StoreHeader"] {
+  background: var(--ctp-mantle);
+}
+
+div[class*="store_StoreNavigation"] {
+  background: var(--ctp-crust);
+}
+
+div[class*="store_StoreNavigationTab"] {
+  color: var(--ctp-subtext0);
+}
+
+div[class*="store_StoreNavigationTab"]:hover {
+  color: var(--ctp-text);
+  background: var(--ctp-surface0);
+}
+
+div[class*="store_StoreNavigationTab"][class*="store_Active"] {
+  color: var(--ctp-accent-primary);
+  border-bottom: 2px solid var(--ctp-accent-primary);
+}
+
+/* ================================================
+   PRODUCT PAGES
+   ================================================ */
+
+div[class*="appdetails_AppDetailsPage"] {
+  background: var(--ctp-base);
+}
+
+div[class*="appdetails_AppDetailsHeader"] {
+  background: linear-gradient(to bottom, var(--ctp-mantle), transparent);
+}
+
+div[class*="appdetails_AppTitle"] {
+  color: var(--ctp-text);
+}
+
+div[class*="appdetails_AppDescription"] {
+  color: var(--ctp-subtext1);
+}
+
+div[class*="appdetails_PurchaseSection"] {
+  background: var(--ctp-surface0);
+}
+
+div[class*="appdetails_PriceTag"] {
+  background: var(--ctp-green);
+  color: var(--ctp-base);
+}
+
+div[class*="appdetails_PriceTag"][class*="appdetails_Discount"] {
+  background: var(--ctp-accent-primary);
+}
+
+div[class*="appdetails_DiscountPercentage"] {
+  background: var(--ctp-green);
+  color: var(--ctp-base);
+}
+
+/* ================================================
+   CART AND CHECKOUT
+   ================================================ */
+
+div[class*="cart_CartPage"] {
+  background: var(--ctp-base);
+}
+
+div[class*="cart_CartHeader"] {
+  background: var(--ctp-mantle);
+  color: var(--ctp-text);
+}
+
+div[class*="cart_CartItem"] {
+  background: var(--ctp-surface0);
+  border: 1px solid var(--ctp-border);
+}
+
+div[class*="cart_CartItem"]:hover {
+  background: var(--ctp-surface1);
+}
+
+div[class*="cart_RemoveButton"] {
+  color: var(--ctp-red);
+}
+
+div[class*="cart_RemoveButton"]:hover {
+  background: var(--ctp-red);
+  color: var(--ctp-base);
+}
+
+div[class*="cart_CartTotal"] {
+  background: var(--ctp-surface0);
+  color: var(--ctp-text);
+}
+
+div[class*="cart_CheckoutButton"] {
+  background: var(--ctp-green);
+  color: var(--ctp-base);
+}
+
+div[class*="cart_CheckoutButton"]:hover {
+  background: rgba(64, 160, 43, 0.85);
+}
+
+/* ================================================
+   SALES AND EVENTS
+   ================================================ */
+
+div[class*="sale_SalePage"],
+div[class*="event_EventPage"] {
+  background: var(--ctp-base);
+}
+
+div[class*="sale_SaleHeader"],
+div[class*="event_EventHeader"] {
+  background: linear-gradient(135deg, var(--ctp-accent-primary), var(--ctp-mauve));
+  color: var(--ctp-base);
+}
+
+div[class*="sale_SaleItem"],
+div[class*="event_EventItem"] {
+  background: var(--ctp-surface0);
+}
+
+div[class*="sale_SaleItem"]:hover,
+div[class*="event_EventItem"]:hover {
+  background: var(--ctp-surface1);
+  transform: scale(1.02);
+}
+
+div[class*="sale_DiscountBadge"] {
+  background: var(--ctp-green);
+  color: var(--ctp-base);
+}
+
+div[class*="sale_CountdownTimer"] {
+  background: var(--ctp-yellow);
+  color: var(--ctp-base);
+}
+
+/* ================================================
+   WISHLIST
+   ================================================ */
+
+div[class*="wishlist_WishlistPage"] {
+  background: var(--ctp-base);
+}
+
+div[class*="wishlist_WishlistItem"] {
+  background: var(--ctp-surface0);
+  border: 1px solid var(--ctp-border);
+}
+
+div[class*="wishlist_WishlistItem"]:hover {
+  background: var(--ctp-surface1);
+}
+
+div[class*="wishlist_PriceAlert"] {
+  background: var(--ctp-green);
+  color: var(--ctp-base);
+}
+
+div[class*="wishlist_AddToCart"] {
+  background: var(--ctp-accent-primary);
+  color: var(--ctp-base);
+}
+
+div[class*="wishlist_AddToCart"]:hover {
+  background: var(--ctp-accent-hover);
+}
+
+/* ================================================
+   SEARCH RESULTS
+   ================================================ */
+
+div[class*="store_SearchResults"] {
+  background: var(--ctp-base);
+}
+
+div[class*="store_SearchResultItem"] {
+  background: var(--ctp-surface0);
+  border: 1px solid var(--ctp-border);
+}
+
+div[class*="store_SearchResultItem"]:hover {
+  background: var(--ctp-surface1);
+  border-color: var(--ctp-accent-primary);
+}
+
+div[class*="store_SearchFilters"] {
+  background: var(--ctp-surface0);
+}
+
+div[class*="store_FilterOption"] {
+  color: var(--ctp-subtext1);
+}
+
+div[class*="store_FilterOption"]:hover {
+  color: var(--ctp-text);
+}
+
+div[class*="store_FilterOption"][class*="store_Active"] {
+  color: var(--ctp-accent-primary);
+  background: var(--ctp-surface1);
+}
+
+/* ================================================
+   FEATURED AND SPECIALS
+   ================================================ */
+
+div[class*="store_FeaturedSection"] {
+  background: linear-gradient(to right, var(--ctp-mantle), var(--ctp-crust));
+}
+
+div[class*="store_SpecialOffer"] {
+  background: var(--ctp-surface0);
+  border: 2px solid var(--ctp-accent-primary);
+}
+
+div[class*="store_SpecialOffer"]:hover {
+  background: var(--ctp-surface1);
+  box-shadow: 0 4px 12px var(--ctp-shadow);
+}
+
+div[class*="store_DailyDeal"] {
+  background: linear-gradient(135deg, var(--ctp-peach), var(--ctp-yellow));
+  color: var(--ctp-base);
+}
+
+div[class*="store_WeekendDeal"] {
+  background: linear-gradient(135deg, var(--ctp-blue), var(--ctp-sapphire));
+  color: var(--ctp-base);
+}

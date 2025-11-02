@@ -1,0 +1,369 @@
+/*
+ * Font Customizations - Catppuccin Frappé
+ */
+
+/* ================================================
+   FONT FAMILY DEFINITIONS
+   ================================================ */
+
+:root {
+  --font-family-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-family-mono: "SF Mono", Monaco, "Cascadia Code", "Roboto Mono", Consolas, "Courier New", monospace;
+  --font-family-display: "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* ================================================
+   BASE TYPOGRAPHY
+   ================================================ */
+
+body,
+.body-text {
+  font-family: var(--font-family-sans);
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ================================================
+   HEADINGS
+   ================================================ */
+
+h1,
+.h1,
+div[class*="heading1"] {
+  font-family: var(--font-family-display);
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--ctp-text);
+}
+
+h2,
+.h2,
+div[class*="heading2"] {
+  font-family: var(--font-family-display);
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--ctp-text);
+}
+
+h3,
+.h3,
+div[class*="heading3"] {
+  font-family: var(--font-family-display);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--ctp-text);
+}
+
+h4,
+.h4,
+div[class*="heading4"] {
+  font-family: var(--font-family-sans);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--ctp-text);
+}
+
+h5,
+.h5,
+div[class*="heading5"] {
+  font-family: var(--font-family-sans);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--ctp-text);
+}
+
+h6,
+.h6,
+div[class*="heading6"] {
+  font-family: var(--font-family-sans);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--ctp-text);
+}
+
+/* ================================================
+   TEXT SIZES
+   ================================================ */
+
+.text-xs {
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.text-sm {
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.text-base {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.text-lg {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.text-xl {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.text-2xl {
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+.text-3xl {
+  font-size: 24px;
+  line-height: 1.3;
+}
+
+/* ================================================
+   FONT WEIGHTS
+   ================================================ */
+
+.font-light {
+  font-weight: 300;
+}
+
+.font-normal {
+  font-weight: 400;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-extrabold {
+  font-weight: 800;
+}
+
+/* ================================================
+   MONOSPACE TEXT
+   ================================================ */
+
+code,
+kbd,
+pre,
+.mono,
+.monospace {
+  font-family: var(--font-family-mono);
+  font-size: 0.9em;
+}
+
+code {
+  background: var(--ctp-surface0);
+  color: var(--ctp-text);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+pre {
+  background: var(--ctp-surface0);
+  color: var(--ctp-text);
+  padding: 12px;
+  border-radius: 8px;
+  overflow-x: auto;
+  border: 1px solid var(--ctp-border);
+}
+
+pre code {
+  background: none;
+  padding: 0;
+}
+
+/* ================================================
+   TEXT STYLES
+   ================================================ */
+
+.italic {
+  font-style: italic;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.line-through {
+  text-decoration: line-through;
+}
+
+.uppercase {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+/* ================================================
+   TEXT ALIGNMENT
+   ================================================ */
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+/* ================================================
+   SPECIAL TEXT ELEMENTS
+   ================================================ */
+
+.game-title,
+div[class*="gametitle"] {
+  font-family: var(--font-family-display);
+  font-weight: 600;
+  color: var(--ctp-text);
+}
+
+.price,
+div[class*="price"] {
+  font-family: var(--font-family-display);
+  font-weight: 700;
+  color: var(--ctp-green);
+}
+
+.username,
+div[class*="username"] {
+  font-weight: 600;
+  color: var(--ctp-accent-primary);
+}
+
+.timestamp,
+div[class*="timestamp"] {
+  font-size: 12px;
+  color: var(--ctp-subtext0);
+}
+
+.status-text,
+div[class*="status"] {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* ================================================
+   BUTTON TEXT
+   ================================================ */
+
+button,
+.button-text {
+  font-family: var(--font-family-sans);
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+}
+
+button.primary {
+  font-weight: 600;
+}
+
+/* ================================================
+   LINK TEXT
+   ================================================ */
+
+a {
+  font-weight: 500;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ================================================
+   LABELS AND CAPTIONS
+   ================================================ */
+
+label,
+.label {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--ctp-subtext1);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.caption,
+figcaption {
+  font-size: 12px;
+  color: var(--ctp-subtext0);
+  line-height: 1.4;
+}
+
+/* ================================================
+   TRUNCATION AND OVERFLOW
+   ================================================ */
+
+.text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.text-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.text-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ================================================
+   LETTER SPACING
+   ================================================ */
+
+.tracking-tight {
+  letter-spacing: -0.02em;
+}
+
+.tracking-normal {
+  letter-spacing: 0;
+}
+
+.tracking-wide {
+  letter-spacing: 0.05em;
+}
+
+.tracking-wider {
+  letter-spacing: 0.1em;
+}

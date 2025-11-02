@@ -1,0 +1,387 @@
+/*
+ * General Settings and Tweaks - Catppuccin Latte
+ */
+
+/* ================================================
+   GLOBAL COMPATIBILITY
+   ================================================ */
+
+.catppuccin-latte {
+  --theme-flavor: latte;
+}
+
+/* ================================================
+   DWMX PLUGIN COMPATIBILITY
+   ================================================ */
+
+.DWMX_Window {
+  background: var(--ctp-base);
+  border: 1px solid var(--ctp-border);
+}
+
+.DWMX_TitleBar {
+  background: var(--ctp-mantle);
+  color: var(--ctp-text);
+}
+
+.DWMX_Content {
+  background: var(--ctp-base);
+}
+
+/* ================================================
+   UTILITY CLASSES
+   ================================================ */
+
+.ctp-bg-base {
+  background: var(--ctp-base);
+}
+
+.ctp-bg-mantle {
+  background: var(--ctp-mantle);
+}
+
+.ctp-bg-crust {
+  background: var(--ctp-crust);
+}
+
+.ctp-bg-surface0 {
+  background: var(--ctp-surface0);
+}
+
+.ctp-bg-surface1 {
+  background: var(--ctp-surface1);
+}
+
+.ctp-bg-surface2 {
+  background: var(--ctp-surface2);
+}
+
+.ctp-text-text {
+  color: var(--ctp-text);
+}
+
+.ctp-text-subtext1 {
+  color: var(--ctp-subtext1);
+}
+
+.ctp-text-subtext0 {
+  color: var(--ctp-subtext0);
+}
+
+.ctp-text-accent {
+  color: var(--ctp-accent-primary);
+}
+
+.ctp-text-success {
+  color: var(--ctp-success);
+}
+
+.ctp-text-warning {
+  color: var(--ctp-warning);
+}
+
+.ctp-text-error {
+  color: var(--ctp-error);
+}
+
+.ctp-text-info {
+  color: var(--ctp-info);
+}
+
+.ctp-border {
+  border-color: var(--ctp-border);
+}
+
+.ctp-border-hover:hover {
+  border-color: var(--ctp-border-hover);
+}
+
+/* ================================================
+   GLOBAL TWEAKS
+   ================================================ */
+
+*:focus-visible {
+  outline: 2px solid var(--ctp-accent-primary);
+  outline-offset: 2px;
+}
+
+::selection {
+  background: var(--ctp-accent-primary);
+  color: var(--ctp-base);
+}
+
+::-moz-selection {
+  background: var(--ctp-accent-primary);
+  color: var(--ctp-base);
+}
+
+img {
+  image-rendering: -webkit-optimize-contrast;
+}
+
+/* ================================================
+   LOADING INDICATORS
+   ================================================ */
+
+.LoadingIndicator,
+div[class*="loading_Indicator"],
+div[class*="throbber_Throbber"] {
+  color: var(--ctp-accent-primary);
+}
+
+.LoadingSpinner,
+div[class*="loading_Spinner"] {
+  border-color: var(--ctp-surface0);
+  border-top-color: var(--ctp-accent-primary);
+}
+
+/* ================================================
+   BADGES AND LABELS
+   ================================================ */
+
+.Badge,
+div[class*="badge_Badge"] {
+  background: var(--ctp-surface1);
+  color: var(--ctp-text);
+}
+
+.Badge.success,
+div[class*="badge_Success"] {
+  background: var(--ctp-green);
+  color: var(--ctp-base);
+}
+
+.Badge.warning,
+div[class*="badge_Warning"] {
+  background: var(--ctp-yellow);
+  color: var(--ctp-base);
+}
+
+.Badge.error,
+div[class*="badge_Error"] {
+  background: var(--ctp-red);
+  color: var(--ctp-base);
+}
+
+.Badge.info,
+div[class*="badge_Info"] {
+  background: var(--ctp-info);
+  color: var(--ctp-base);
+}
+
+/* ================================================
+   PROGRESS BARS
+   ================================================ */
+
+.ProgressBar,
+div[class*="progress_Bar"] {
+  background: var(--ctp-surface0);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.ProgressBar_Fill,
+div[class*="progress_Fill"] {
+  background: var(--ctp-accent-primary);
+  transition: width 0.3s ease;
+}
+
+.ProgressBar_Fill.success,
+div[class*="progress_Fill"][class*="progress_Success"] {
+  background: var(--ctp-green);
+}
+
+.ProgressBar_Fill.warning,
+div[class*="progress_Fill"][class*="progress_Warning"] {
+  background: var(--ctp-yellow);
+}
+
+.ProgressBar_Fill.error,
+div[class*="progress_Fill"][class*="progress_Error"] {
+  background: var(--ctp-red);
+}
+
+/* ================================================
+   TOOLTIPS AND POPOVERS
+   ================================================ */
+
+.Tooltip,
+div[class*="tooltip_Tooltip"] {
+  background: var(--ctp-surface0);
+  color: var(--ctp-text);
+  border: 1px solid var(--ctp-border);
+  box-shadow: 0 4px 8px var(--ctp-shadow);
+}
+
+.Popover,
+div[class*="popover_Popover"] {
+  background: var(--ctp-mantle);
+  border: 1px solid var(--ctp-border);
+  box-shadow: 0 8px 16px var(--ctp-shadow-strong);
+}
+
+.Popover_Header,
+div[class*="popover_Header"] {
+  background: var(--ctp-surface0);
+  color: var(--ctp-text);
+  border-bottom: 1px solid var(--ctp-border);
+}
+
+.Popover_Content,
+div[class*="popover_Content"] {
+  color: var(--ctp-text);
+}
+
+/* ================================================
+   TABS
+   ================================================ */
+
+.TabBar,
+div[class*="tabs_TabBar"] {
+  background: var(--ctp-surface0);
+  border-bottom: 1px solid var(--ctp-border);
+}
+
+.Tab,
+div[class*="tabs_Tab"] {
+  color: var(--ctp-subtext0);
+}
+
+.Tab:hover,
+div[class*="tabs_Tab"]:hover {
+  color: var(--ctp-text);
+  background: var(--ctp-surface1);
+}
+
+.Tab.active,
+div[class*="tabs_Tab"][class*="tabs_Active"] {
+  color: var(--ctp-accent-primary);
+  border-bottom: 2px solid var(--ctp-accent-primary);
+}
+
+/* ================================================
+   CARDS AND PANELS
+   ================================================ */
+
+.Card,
+div[class*="card_Card"] {
+  background: var(--ctp-surface0);
+  border: 1px solid var(--ctp-border);
+  border-radius: 8px;
+}
+
+.Card:hover,
+div[class*="card_Card"]:hover {
+  background: var(--ctp-surface1);
+  border-color: var(--ctp-border-hover);
+}
+
+.Card_Header,
+div[class*="card_Header"] {
+  background: var(--ctp-surface1);
+  color: var(--ctp-text);
+  border-bottom: 1px solid var(--ctp-border);
+}
+
+.Card_Content,
+div[class*="card_Content"] {
+  color: var(--ctp-text);
+}
+
+/* ================================================
+   ACCORDIONS
+   ================================================ */
+
+.Accordion,
+div[class*="accordion_Accordion"] {
+  background: var(--ctp-surface0);
+  border: 1px solid var(--ctp-border);
+}
+
+.Accordion_Header,
+div[class*="accordion_Header"] {
+  background: var(--ctp-surface1);
+  color: var(--ctp-text);
+}
+
+.Accordion_Header:hover,
+div[class*="accordion_Header"]:hover {
+  background: var(--ctp-surface2);
+}
+
+.Accordion_Content,
+div[class*="accordion_Content"] {
+  color: var(--ctp-text);
+}
+
+/* ================================================
+   SEPARATORS AND DIVIDERS
+   ================================================ */
+
+hr,
+.Divider,
+div[class*="divider_Divider"] {
+  border-color: var(--ctp-border);
+  background: var(--ctp-border);
+}
+
+/* ================================================
+   OVERLAYS
+   ================================================ */
+
+.Overlay,
+div[class*="overlay_Overlay"] {
+  background: rgba(76, 79, 105, 0.8);
+}
+
+.Overlay.dark,
+div[class*="overlay_Dark"] {
+  background: rgba(76, 79, 105, 0.9);
+}
+
+/* ================================================
+   ANIMATIONS
+   ================================================ */
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-up {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-down {
+  from {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease;
+}
+
+.animate-slide-in-up {
+  animation: slide-in-up 0.3s ease;
+}
+
+.animate-slide-in-down {
+  animation: slide-in-down 0.3s ease;
+}
