@@ -1,0 +1,9 @@
+{
+  "name": "Catppuccin Frappé",
+  "author": "Catppuccin Org",
+  "version": "1.0.0",
+  "description": "Soothing pastel theme for Steambrew - Frappé flavor (Dark Blue-Gray)",
+  "flavor": "frappe",
+  "homepage": "https://github.com/catppuccin/steam",
+  "license": "MIT"
+}
